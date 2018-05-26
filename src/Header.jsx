@@ -2,6 +2,9 @@ import React from 'react';
 
 import ellaLogo from './img/ella-logo.svg';
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/href-no-hash */
+
 function Header() {
   return (
     <header className="Header">

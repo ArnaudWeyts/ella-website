@@ -5,6 +5,8 @@ import './App.css';
 import Header from './Header';
 import Contact from './Contact';
 
+/* eslint-disable jsx-a11y/media-has-caption */
+
 function App() {
   return (
     <div className="App">
