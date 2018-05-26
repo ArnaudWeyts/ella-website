@@ -1,6 +1,9 @@
 @font-face {
   font-family: 'Avenir Book';
-  src: local('Avenir Book'), url(./fonts/AvenirLTStd-Book.otf) format('otf');
+  src: local('Avenir Book'), url(./fonts/AvenirLTStd-Book.woff2) format('woff2'),
+    url(./fonts/AvenirLTStd-Book.woff) format('woff'),
+    url(./fonts/AvenirLTStd-Book.ttf) format('truetype'),
+    url(./fonts/AvenirLTStd-Book.otf) format('opentype');
 }
 
 body {
