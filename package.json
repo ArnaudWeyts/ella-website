@@ -1,6 +1,7 @@
 {
   "name": "ella-website",
   "version": "0.1.0",
+  "homepage": "https://b-aim-knowledgeflow.github.io/website/",
   "private": true,
   "dependencies": {
     "react": "^16.4.0",
