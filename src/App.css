@@ -1,0 +1,52 @@
+.Header {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  background: grey;
+}
+
+.Header__title {
+  font-size: 2.5em;
+  display: inline-block;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.Header__menu {
+}
+
+.Video {
+  width: 100%;
+  background: lightgrey;
+}
+
+.Segment {
+  height: 15.625em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+.Contact__info {
+  width: 33%;
+}
+
+.Contact__form {
+  width: 33%;
+}
+
+.Contact__form input,
+.Contact__form textarea {
+  width: 100%;
+}
+
+.Footer {
+  height: 6.25em;
+  background: darkgrey;
+}
