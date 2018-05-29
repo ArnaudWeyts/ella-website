@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from './Header';
 import Contact from './Contact';
+import Webchat from './Webchat';
 
 /* eslint-disable jsx-a11y/media-has-caption */
 
@@ -22,6 +23,7 @@ function App() {
       <div className="Segment">Map</div>
       <Contact />
       <footer className="Footer" />
+      <Webchat />
     </div>
   );
 }
