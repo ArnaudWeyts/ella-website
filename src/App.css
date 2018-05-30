@@ -2,25 +2,26 @@
   padding: 2em;
   display: flex;
   align-items: center;
-  background: grey;
 }
 
 .Header__logo {
   height: 2.5em;
-  margin-right: 1em;
+  margin-bottom: -0.75em;
 }
 
-.Header__title {
-  font-size: 2.5em;
-  display: inline-block;
-  margin: 0;
-  flex-grow: 1;
+.Header__menu {
+  margin: 0 auto;
 }
 
 .Header__menu a {
   margin: 0 1em;
   text-decoration: none;
-  color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.Header__menu__item--selected {
+  border-bottom: solid 2px #eb8018;
 }
 
 .Video {
