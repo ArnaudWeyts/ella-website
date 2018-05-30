@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import woman from './img/woman.svg';
+import close from './img/close.svg';
 
 const Container = styled.div`
   position: fixed;
@@ -24,7 +25,8 @@ const Iframe = styled.iframe`
   background: #fff;
 `;
 
-const CloseButton = styled.button`
+const CloseButton = styled.img`
+  cursor: pointer;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -79,7 +81,7 @@ class WebchatContainer extends Component {
             title="webchat"
             src="https://webchat.botframework.com/embed/project-siba-faqbotservice?s=mO_IJV-qtHA.cwA.55M.1fgxugry7WA18aX_h7X4Pv1FDJj-TL3j4Y9LVA8350Y"
           />
-          <CloseButton onClick={this.toggleChat}>Close</CloseButton>
+          <CloseButton src={close} onClick={this.toggleChat} />
         </WebchatLook>
         <WebchatLook active={!this.state.showChat}>
           <Badge>1</Badge>
