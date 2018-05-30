@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from './Header';
+import BeforeElla from './BeforeElla';
 import Contact from './Contact';
 import Webchat from './Webchat';
 
@@ -33,7 +34,7 @@ function App() {
         <source />
         Your browser does not support the video tag.
       </Video>
-      <Segment>Who we are</Segment>
+      <BeforeElla />
       <Segment>Grow your business</Segment>
       <Segment>What we can do for you</Segment>
       <Segment>Pricing</Segment>
