@@ -72,6 +72,7 @@ const ButtonContainer = styled.div`
 `;
 
 const OpenCloseButton = styled.button`
+  cursor: pointer;
   float: right;
   height: 5em;
   width: 5em;
@@ -100,7 +101,7 @@ class WebchatContainer extends Component {
     super(props, context);
 
     this.state = {
-      showChat: null,
+      showChat: false,
       allowFadeout: false,
     };
 
@@ -108,26 +109,28 @@ class WebchatContainer extends Component {
   }
 
   toggleChat() {
-    if (this.state.showChat === null) {
+    const { showChat, allowFadeout } = this.state;
+    if (!showChat && !allowFadeout) {
       this.setState({ allowFadeout: true });
     }
     this.setState({
-      showChat: !this.state.showChat,
+      showChat: !showChat,
     });
   }
 
   render() {
+    const { showChat, allowFadeout } = this.state;
     return (
       <Container>
         <Iframe
-          active={this.state.showChat}
-          allowFadeout={this.state.allowFadeout}
+          active={showChat}
+          allowFadeout={allowFadeout}
           title="webchat"
           src="https://webchat.botframework.com/embed/project-siba-faqbotservice?s=mO_IJV-qtHA.cwA.55M.1fgxugry7WA18aX_h7X4Pv1FDJj-TL3j4Y9LVA8350Y"
         />
         <ButtonContainer onClick={this.toggleChat}>
-          {!this.state.showChat && <Badge>1</Badge>}
-          <OpenCloseButton open={this.state.showChat} />
+          {!showChat && <Badge>1</Badge>}
+          <OpenCloseButton open={showChat} />
         </ButtonContainer>
       </Container>
     );
