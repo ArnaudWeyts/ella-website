@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 import woman from './img/woman.svg';
 import close from './img/close.svg';
@@ -10,30 +10,69 @@ const Container = styled.div`
   right: 1.25em;
 `;
 
-const WebchatLook = styled.div`
-  display: ${({ active }) => (active ? 'block' : 'none')};
+const FadeIn = keyframes`
+  0% {
+    opacity: 0;
+    height: 50vh;
+  }
+  100% {
+    opacity: 1;
+    height: 50vh;
+  }
+`;
+
+const FadeOut = keyframes`
+  0% {
+    opacity: 1;
+    height: 50vh;
+  }
+  99% {
+    opacity: 0;
+    height: 50vh;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
 `;
 
 const Iframe = styled.iframe`
-  height: 100%;
-  width: 100%;
-  border: solid 1px #000;
-  width: 50vw;
-  height: 50vh;
+  display: block;
+  height: 0;
+  opacity: 0;
+  border: solid 1px #0078d7;
+  border-radius: 5px;
   max-width: 18.75em;
   max-height: 37.5em;
   background: #fff;
+  margin-bottom: 5em;
+
+  ${({ active }) =>
+    active &&
+    css`
+      width: 50vw;
+      height: 50vh;
+      opacity: 1;
+      animation: ${FadeIn} 0.5s ease-in-out;
+    `};
+
+  ${({ active, allowFadeout }) =>
+    !active &&
+    allowFadeout &&
+    css`
+      animation: ${FadeOut} 0.5s ease-in-out;
+    `};
 `;
 
-const CloseButton = styled.img`
+const ButtonContainer = styled.div`
   cursor: pointer;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  bottom: 0;
+  right: 0;
 `;
 
-const OpenButton = styled.button`
-  cursor: pointer;
+const OpenCloseButton = styled.button`
+  float: right;
   height: 5em;
   width: 5em;
   border-radius: 50%;
@@ -61,13 +100,17 @@ class WebchatContainer extends Component {
     super(props, context);
 
     this.state = {
-      showChat: false,
+      showChat: null,
+      allowFadeout: false,
     };
 
     this.toggleChat = this.toggleChat.bind(this);
   }
 
   toggleChat() {
+    if (this.state.showChat === null) {
+      this.setState({ allowFadeout: true });
+    }
     this.setState({
       showChat: !this.state.showChat,
     });
@@ -76,17 +119,16 @@ class WebchatContainer extends Component {
   render() {
     return (
       <Container>
-        <WebchatLook active={this.state.showChat}>
-          <Iframe
-            title="webchat"
-            src="https://webchat.botframework.com/embed/project-siba-faqbotservice?s=mO_IJV-qtHA.cwA.55M.1fgxugry7WA18aX_h7X4Pv1FDJj-TL3j4Y9LVA8350Y"
-          />
-          <CloseButton src={close} onClick={this.toggleChat} />
-        </WebchatLook>
-        <WebchatLook active={!this.state.showChat}>
-          <Badge>1</Badge>
-          <OpenButton onClick={this.toggleChat} />
-        </WebchatLook>
+        <Iframe
+          active={this.state.showChat}
+          allowFadeout={this.state.allowFadeout}
+          title="webchat"
+          src="https://webchat.botframework.com/embed/project-siba-faqbotservice?s=mO_IJV-qtHA.cwA.55M.1fgxugry7WA18aX_h7X4Pv1FDJj-TL3j4Y9LVA8350Y"
+        />
+        <ButtonContainer onClick={this.toggleChat}>
+          {!this.state.showChat && <Badge>1</Badge>}
+          <OpenCloseButton />
+        </ButtonContainer>
       </Container>
     );
   }
