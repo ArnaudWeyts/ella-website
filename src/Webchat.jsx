@@ -77,7 +77,7 @@ const OpenCloseButton = styled.button`
   width: 5em;
   border-radius: 50%;
   border: 1px solid #eb8018;
-  background: ${() => `#fff url(${woman})`};
+  background: ${({ open }) => `#fff url(${open ? close : woman})`};
   background-position: center;
   background-size: cover;
 `;
@@ -127,7 +127,7 @@ class WebchatContainer extends Component {
         />
         <ButtonContainer onClick={this.toggleChat}>
           {!this.state.showChat && <Badge>1</Badge>}
-          <OpenCloseButton />
+          <OpenCloseButton open={this.state.showChat} />
         </ButtonContainer>
       </Container>
     );
