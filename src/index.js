@@ -4,17 +4,19 @@ import { injectGlobal } from 'styled-components';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import { AvenirBookOTF, AvenirBookTTF, AvenirBookWOFF, AvenirBookWOFF2 } from './fonts';
+
 /* eslint-disable no-unused-expressions */
 /* eslint-disable react/jsx-filename-extension */
 /* global document */
 
 injectGlobal`
   @font-face {
-  font-family: 'Avenir Book';
-  src: local('Avenir Book'), url(./fonts/AvenirLTStd-Book.woff2) format('woff2'),
-    url(./fonts/AvenirLTStd-Book.woff) format('woff'),
-    url(./fonts/AvenirLTStd-Book.ttf) format('truetype'),
-    url(./fonts/AvenirLTStd-Book.otf) format('opentype');
+    font-family: 'Avenir Book';
+    src: local('Avenir Book'), url('${AvenirBookWOFF2}') format('woff2'),
+      url('${AvenirBookWOFF}') format('woff'),
+      url('${AvenirBookTTF}') format('truetype'),
+      url('${AvenirBookOTF}') format('opentype');
   }
 
   body {
