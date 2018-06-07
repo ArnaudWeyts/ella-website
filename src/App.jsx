@@ -7,8 +7,8 @@ import Demo from './Demo';
 const App = () => (
   <Router>
     <React.Fragment>
-      <Route exact path="/" component={Home} />
-      <Route path="/demo" component={Demo} />
+      <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+      <Route path={`${process.env.PUBLIC_URL}/demo`} component={Demo} />
     </React.Fragment>
   </Router>
 );
