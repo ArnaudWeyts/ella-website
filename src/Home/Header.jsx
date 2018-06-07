@@ -62,7 +62,7 @@ function HeaderContainer() {
           position: 'absolute',
           right: '1em',
         }}
-        to="/demo"
+        to={`${process.env.PUBLIC_URL}/demo`}
       >
         <TryMe>Try me</TryMe>
       </Link>
