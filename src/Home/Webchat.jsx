@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 
-import woman from './img/woman.svg';
-import close from './img/close.svg';
+import woman from '../img/woman.svg';
+import close from '../img/close.svg';
 
 const Container = styled.div`
   position: fixed;

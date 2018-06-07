@@ -33,7 +33,7 @@ const Input = styled.input`
   border: solid 1px lightgrey;
   border-radius: 8px;
   padding: 0.4em;
-  font-family: Avenir Book;
+  font-family: Avenir;
   box-sizing: border-box;
 
   &::placeholder {
@@ -47,7 +47,7 @@ const SubmitButton = styled.button`
   float: right;
   margin: 0;
   text-transform: uppercase;
-  font-family: Avenir Book;
+  font-family: Avenir;
   color: #147ab8;
   border: solid 1px #147ab8;
   border-radius: 5px;
