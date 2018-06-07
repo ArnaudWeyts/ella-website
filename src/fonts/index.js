@@ -1,6 +1,6 @@
-import AvenirBookOTF from './AvenirLTStd-Book.otf';
-import AvenirBookTTF from './AvenirLTStd-Book.ttf';
-import AvenirBookWOFF from './AvenirLTStd-Book.woff';
-import AvenirBookWOFF2 from './AvenirLTStd-Book.woff2';
+import AvenirTTF from './Avenir.ttf';
+import AvenirRegularWOFF from './AvenirRegular.woff';
+import AvenirRegularWOFF2 from './AvenirRegular.woff2';
+import AvenirHeavyWOFF2 from './AvenirHeavy.woff2';
 
-export { AvenirBookOTF, AvenirBookTTF, AvenirBookWOFF, AvenirBookWOFF2 };
+export { AvenirTTF, AvenirRegularWOFF, AvenirRegularWOFF2, AvenirHeavyWOFF2 };

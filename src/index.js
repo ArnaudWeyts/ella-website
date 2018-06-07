@@ -4,7 +4,7 @@ import { injectGlobal } from 'styled-components';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { AvenirBookOTF, AvenirBookTTF, AvenirBookWOFF, AvenirBookWOFF2 } from './fonts';
+import { AvenirTTF, AvenirRegularWOFF, AvenirRegularWOFF2, AvenirHeavyWOFF2 } from './fonts';
 
 /* eslint-disable no-unused-expressions */
 /* eslint-disable react/jsx-filename-extension */
@@ -12,17 +12,25 @@ import { AvenirBookOTF, AvenirBookTTF, AvenirBookWOFF, AvenirBookWOFF2 } from '.
 
 injectGlobal`
   @font-face {
-    font-family: 'Avenir Book';
-    src: local('Avenir Book'), url('${AvenirBookWOFF2}') format('woff2'),
-      url('${AvenirBookWOFF}') format('woff'),
-      url('${AvenirBookTTF}') format('truetype'),
-      url('${AvenirBookOTF}') format('opentype');
+    font-family: 'Avenir';
+    src: local('Avenir'), url('${AvenirRegularWOFF2}') format('woff2'),
+      url('${AvenirRegularWOFF}') format('woff'),
+      url('${AvenirTTF}') format('truetype'),
   }
+
+  @font-face {
+    font-family: "Avenir";
+    src: local('Avenir'), url('${AvenirHeavyWOFF2}') format('woff2'),
+    font-weight: bold;
+}
 
   body {
     margin: 0;
     padding: 0;
-    font-family: Avenir Book;
+    font-family: Avenir;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
   }
 `;
 
