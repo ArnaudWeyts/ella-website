@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from './Header';
-import BeforeElla from './BeforeElla';
+import MakingKAccessible from './MakingKAccessible';
 import Contact from './Contact';
 import Footer from './Footer';
 import Webchat from './Webchat';
@@ -16,7 +16,7 @@ const Container = styled.div`
 const Video = styled.video`
   width: 100%;
   height: 31.25em;
-  background: lightgrey;
+  background: #a1bdc9;
 `;
 
 const Segment = styled.div`
@@ -33,7 +33,7 @@ const Home = () => (
       <source />
       Your browser does not support the video tag.
     </Video>
-    <BeforeElla />
+    <MakingKAccessible />
     <Segment>Grow your business</Segment>
     <Segment>What we can do for you</Segment>
     <Segment>Pricing</Segment>

@@ -11,6 +11,7 @@ const Header = styled.header`
   padding: 2em;
   display: flex;
   align-items: center;
+  background: #a1bdc9;
 `;
 
 const HeaderMenu = styled.nav`
@@ -24,9 +25,10 @@ const HeaderLogo = styled.img`
 `;
 
 const NavLink = styled.a`
+  font-size: 20px;
   margin: 0 1em;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   border-bottom: ${({ selected }) => (selected ? 'solid 2px #eb8018;' : 0)};
 `;
