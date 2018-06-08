@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Header from './Header';
 import BeforeElla from './BeforeElla';
 import Contact from './Contact';
+import Footer from './Footer';
 import Webchat from './Webchat';
 
 /* eslint-disable jsx-a11y/media-has-caption */
@@ -25,11 +26,6 @@ const Segment = styled.div`
   justify-content: center;
 `;
 
-const Footer = styled.footer`
-  height: 6.25em;
-  background: darkgrey;
-`;
-
 const Home = () => (
   <Container>
     <Header />
@@ -43,7 +39,7 @@ const Home = () => (
     <Segment>Pricing</Segment>
     <Segment>Map</Segment>
     <Contact />
-    <Footer className="Footer" />
+    <Footer />
     <Webchat />
   </Container>
 );
