@@ -8,6 +8,10 @@ import Webchat from './Webchat';
 
 /* eslint-disable jsx-a11y/media-has-caption */
 
+const Container = styled.div`
+  overflow: hidden;
+`;
+
 const Video = styled.video`
   width: 100%;
   height: 31.25em;
@@ -27,7 +31,7 @@ const Footer = styled.footer`
 `;
 
 const Home = () => (
-  <React.Fragment>
+  <Container>
     <Header />
     <Video>
       <source />
@@ -41,7 +45,7 @@ const Home = () => (
     <Contact />
     <Footer className="Footer" />
     <Webchat />
-  </React.Fragment>
+  </Container>
 );
 
 export default Home;

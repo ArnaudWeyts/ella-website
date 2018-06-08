@@ -8,6 +8,7 @@ const Container = styled.div`
   position: fixed;
   bottom: 1.25em;
   right: 1.25em;
+  z-index: 99;
 `;
 
 const FadeIn = keyframes`

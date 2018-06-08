@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import WhiteCloud from '../img/white-cloud.svg';
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,7 +11,27 @@ const Container = styled.div`
   max-width: 37.5em;
 `;
 
+const Cloud = styled.div`
+  width: 115vw;
+  z-index: 1;
+  height: 15em;
+  background: url(${WhiteCloud});
+  background-position: center 7em;
+  background-repeat: repeat-x;
+  margin-top: -15em;
+  margin-bottom: -2em;
+
+  @media (max-width: 900px) {
+    background-position-y: 9em;
+  }
+
+  @media (max-width: 600px) {
+    background-position-y: 11em;
+  }
+`;
+
 const Title = styled.h2`
+  z-index: 2;
   text-transform: uppercase;
 `;
 
@@ -31,6 +53,7 @@ const Item = styled.li`
 function BeforeElla() {
   return (
     <Container>
+      <Cloud />
       <Title>Before Ella</Title>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ea maxime, quisquam officia
