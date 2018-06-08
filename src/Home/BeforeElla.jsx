@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import WhiteCloud from '../img/white-cloud.svg';
+import whiteCloud from '../img/white-cloud.svg';
 
 const Container = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ const Cloud = styled.div`
   width: 115vw;
   z-index: 1;
   height: 15em;
-  background: url(${WhiteCloud});
+  background: url(${whiteCloud});
   background-position: center 7em;
   background-repeat: repeat-x;
   margin-top: -15em;
