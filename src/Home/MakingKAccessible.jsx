@@ -43,6 +43,7 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   height: 20em;
+  margin-top: 1.25em;
 `;
 
 function MakingKAccessible() {
