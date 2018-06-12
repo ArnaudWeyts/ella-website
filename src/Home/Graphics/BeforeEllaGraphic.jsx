@@ -24,68 +24,70 @@ const spinReverse = keyframes`
 const Svg = styled.svg`
   width: 50%;
 
-  & .cls-1 {
-    fill: #fde2d1;
-  }
+  & {
+    .cls-1 {
+      fill: #fde2d1;
+    }
 
-  & .cls-2 {
-    fill: #3d1c09;
-  }
+    .cls-2 {
+      fill: #3d1c09;
+    }
 
-  & .cls-3 {
-    fill: #f2f2f2;
-  }
+    .cls-3 {
+      fill: #f2f2f2;
+    }
 
-  & .cls-4 {
-    fill: #0d8ec5;
-  }
+    .cls-4 {
+      fill: #0d8ec5;
+    }
 
-  & .cls-5 {
-    fill: #2e1507;
-  }
+    .cls-5 {
+      fill: #2e1507;
+    }
 
-  & .cls-6 {
-    fill: #b3b3b3;
-  }
+    .cls-6 {
+      fill: #b3b3b3;
+    }
 
-  & .cls-6,
-  .cls-7 {
-    stroke: #363f44;
-  }
+    .cls-6,
+    .cls-7 {
+      stroke: #363f44;
+    }
 
-  & .cls-10,
-  .cls-6,
-  .cls-7,
-  .cls-8,
-  .cls-9 {
-    stroke-miterlimit: 10;
-  }
+    .cls-10,
+    .cls-6,
+    .cls-7,
+    .cls-8,
+    .cls-9 {
+      stroke-miterlimit: 10;
+    }
 
-  & .cls-7 {
-    fill: #e6e6e6;
-  }
+    .cls-7 {
+      fill: #e6e6e6;
+    }
 
-  & .cls-10,
-  .cls-8,
-  .cls-9 {
-    fill: none;
-  }
+    .cls-10,
+    .cls-8,
+    .cls-9 {
+      fill: none;
+    }
 
-  & .cls-8,
-  .cls-9 {
-    stroke: #fff;
-  }
+    .cls-8,
+    .cls-9 {
+      stroke: #fff;
+    }
 
-  & .cls-8 {
-    stroke-width: 2px;
-  }
+    .cls-8 {
+      stroke-width: 2px;
+    }
 
-  & .cls-9 {
-    stroke-width: 1.5px;
-  }
+    .cls-9 {
+      stroke-width: 1.5px;
+    }
 
-  & .cls-10 {
-    stroke: #ccc;
+    .cls-10 {
+      stroke: #ccc;
+    }
   }
 `;
 
