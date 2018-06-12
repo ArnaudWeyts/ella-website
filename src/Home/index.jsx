@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Header from './Header';
 import MakingKAccessible from './MakingKAccessible';
 import ANewWay from './ANewWay';
+import WhyChooseElla from './WhyChooseElla';
 import Contact from './Contact';
 import Footer from './Footer';
 import Webchat from './Webchat';
@@ -20,13 +21,6 @@ const Video = styled.video`
   background: #a1bdc9;
 `;
 
-const Segment = styled.div`
-  height: 15.625em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 const Home = () => (
   <Container>
     <Header />
@@ -36,9 +30,7 @@ const Home = () => (
     </Video>
     <MakingKAccessible />
     <ANewWay />
-    <Segment>What we can do for you</Segment>
-    <Segment>Pricing</Segment>
-    <Segment>Map</Segment>
+    <WhyChooseElla />
     <Contact />
     <Footer />
     <Webchat />

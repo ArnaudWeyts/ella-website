@@ -38,9 +38,8 @@ const HowItWorks = styled.div`
   align-items: center;
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   text-transform: uppercase;
-  font-size: 35px;
   width: 100%;
   text-align: center;
 `;

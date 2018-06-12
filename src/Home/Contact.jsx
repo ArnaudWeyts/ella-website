@@ -9,6 +9,12 @@ const Container = styled.div`
   max-width: 40em;
 `;
 
+const Title = styled.h2`
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+`;
+
 const Info = styled.div`
   text-align: center;
   display: block;
@@ -67,7 +73,7 @@ function Contact() {
   return (
     <Container>
       <Info>
-        <h2>Contact & Support</h2>
+        <Title>Contact & Support</Title>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut eius quia itaque porro, quod
           voluptatum pariatur.
