@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import whiteCloud from '../img/white-cloud.svg';
-import beforeElla from '../img/before-ella.svg';
 import afterElla from '../img/after-ella.svg';
+
+import BeforeEllaGraphic from './BeforeEllaGraphic';
+import AfterEllaGraphic from './AfterEllaGraphic';
 
 const Container = styled.div`
   display: flex;
@@ -59,8 +61,8 @@ function MakingKAccessible() {
         perferendis perspiciatis consequuntur qui at odio?
       </p>
       <ImageContainer>
-        <Graphic src={beforeElla} alt="man thinking" />
-        <Graphic src={afterElla} alt="graphic of man with idea using Ella" />
+        <BeforeEllaGraphic />
+        <AfterEllaGraphic />
       </ImageContainer>
     </Container>
   );
