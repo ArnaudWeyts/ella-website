@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import whiteCloud from '../img/white-cloud.svg';
-import afterElla from '../img/after-ella.svg';
 
 import BeforeEllaGraphic from './BeforeEllaGraphic';
 import AfterEllaGraphic from './AfterEllaGraphic';
@@ -44,10 +43,6 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   height: 20em;
-`;
-
-const Graphic = styled.img`
-  flex-grow: 1;
 `;
 
 function MakingKAccessible() {
