@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 import whiteCloud from '../img/white-cloud.svg';
 
-import BeforeEllaGraphic from './BeforeEllaGraphic';
-import AfterEllaGraphic from './AfterEllaGraphic';
+import BeforeEllaGraphic from './Graphics/BeforeEllaGraphic';
+import AfterEllaGraphic from './Graphics/AfterEllaGraphic';
 
 const Container = styled.div`
   display: flex;
