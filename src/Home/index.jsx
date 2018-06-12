@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Header from './Header';
 import MakingKAccessible from './MakingKAccessible';
+import ANewWay from './ANewWay';
 import Contact from './Contact';
 import Footer from './Footer';
 import Webchat from './Webchat';
@@ -34,7 +35,7 @@ const Home = () => (
       Your browser does not support the video tag.
     </Video>
     <MakingKAccessible />
-    <Segment>Grow your business</Segment>
+    <ANewWay />
     <Segment>What we can do for you</Segment>
     <Segment>Pricing</Segment>
     <Segment>Map</Segment>
