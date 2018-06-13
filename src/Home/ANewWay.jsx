@@ -3,11 +3,7 @@ import styled from 'styled-components';
 
 import graphics from '../img/aNewWay';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+import { Container, Intro, Title, SubTitle, Paragraph } from './styles';
 
 const Banner = styled.div`
   width: 100vw;
@@ -36,17 +32,6 @@ const HowItWorks = styled.div`
   align-items: center;
 `;
 
-const Title = styled.h2`
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-`;
-
-const Paragraph = styled.p`
-  max-width: 37.5em;
-  text-align: center;
-`;
-
 const ImageContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -55,12 +40,8 @@ const ImageContainer = styled.div`
 `;
 
 const Segment = styled.div`
-  margin: 2em;
+  margin: 1em 3em;
   text-align: center;
-`;
-
-const SegmentTitle = styled.h4`
-  font-size: 33px;
 `;
 
 const ANewWay = () => (
@@ -69,16 +50,18 @@ const ANewWay = () => (
       <BannerTitle>A new way to store and access knowledge</BannerTitle>
     </Banner>
     <HowItWorks>
-      <Title>How it works</Title>
-      <Paragraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officia magni vitae
-        maiores inventore explicabo dolore dolorum, optio impedit eum totam corporis tempore
-        provident, neque adipisci quisquam animi esse repellat!
-      </Paragraph>
+      <Intro>
+        <Title>How it works</Title>
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officia magni vitae
+          maiores inventore explicabo dolore dolorum, optio impedit eum totam corporis tempore
+          provident, neque adipisci quisquam animi esse repellat!
+        </Paragraph>
+      </Intro>
       <ImageContainer>
         <Segment>
           <img src={graphics.search} alt="search" />
-          <SegmentTitle>Search</SegmentTitle>
+          <SubTitle>Search</SubTitle>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
             maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum iure
@@ -87,7 +70,7 @@ const ANewWay = () => (
         </Segment>
         <Segment>
           <img src={graphics.kf} alt="kf" />
-          <SegmentTitle>KnowledgeFlow</SegmentTitle>
+          <SubTitle>KnowledgeFlow</SubTitle>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
             maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum iure
@@ -96,7 +79,7 @@ const ANewWay = () => (
         </Segment>
         <Segment>
           <img src={graphics.answer} alt="answer" />
-          <SegmentTitle>Answer</SegmentTitle>
+          <SubTitle>Answer</SubTitle>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
             maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum iure

@@ -3,20 +3,9 @@ import styled, { css } from 'styled-components';
 
 import graphics from '../img/whyChooseElla';
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  flex-direction: column;
-  max-width: 56.25em;
-`;
+import { Container, Intro, Title, SubTitle, Paragraph } from './styles';
 
-const Title = styled.h2`
-  text-transform: uppercase;
-  text-align: center;
-`;
-
-const Paragraph = styled.p`
+const ContainerSmall = Container.extend`
   max-width: 56.25em;
 `;
 
@@ -26,8 +15,7 @@ const Segment = styled.div`
   align-items: center;
 `;
 
-const SegmentTitle = styled.h4`
-  font-size: 20px;
+const SegmentTitle = SubTitle.extend`
   text-align: center;
 `;
 
@@ -47,22 +35,20 @@ const SegmentDescription = styled.div`
     `};
 `;
 
-const Graphic = styled.img`
-  width: 100%;
-`;
-
 const WhyChooseElla = () => (
-  <Container>
-    <Title>Why choose Ella?</Title>
-    <Paragraph>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorem totam maiores
-      tenetur, vel asperiores possimus exercitationem reiciendis. Earum molestias fugit iure
-      sapiente ut necessitatibus voluptas modi dolores quis iusto!
-    </Paragraph>
+  <ContainerSmall>
+    <Intro>
+      <Title>Why choose Ella?</Title>
+      <Paragraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorem totam maiores
+        tenetur, vel asperiores possimus exercitationem reiciendis. Earum molestias fugit iure
+        sapiente ut necessitatibus voluptas modi dolores quis iusto!
+      </Paragraph>
+    </Intro>
     <Segment>
       <SegmentGraphic>
         <SegmentTitle>Reduce Training Costs and Time</SegmentTitle>
-        <Graphic src={graphics.reduceTrainingCosts} />
+        <img src={graphics.reduceTrainingCosts} alt="Reduce training costs and time graphic" />
       </SegmentGraphic>
       <SegmentDescription>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minima illum magni, autem
@@ -78,13 +64,13 @@ const WhyChooseElla = () => (
       </SegmentDescription>
       <SegmentGraphic>
         <SegmentTitle>Capture Valuable Knowledge</SegmentTitle>
-        <Graphic src={graphics.captureValuableKnowledge} />
+        <img src={graphics.captureValuableKnowledge} alt="Capture valueable knowledge graphic" />
       </SegmentGraphic>
     </Segment>
     <Segment>
       <SegmentGraphic>
         <SegmentTitle>Improve access &amp; knowledge retention</SegmentTitle>
-        <Graphic src={graphics.impAccKnowRet} />
+        <img src={graphics.impAccKnowRet} alt="Improve access and knowledge retention graphic" />
       </SegmentGraphic>
       <SegmentDescription>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minima illum magni, autem
@@ -92,7 +78,7 @@ const WhyChooseElla = () => (
         fugit! Aut, adipisci inventore.
       </SegmentDescription>
     </Segment>
-  </Container>
+  </ContainerSmall>
 );
 
 export default WhyChooseElla;

@@ -3,25 +3,7 @@ import styled from 'styled-components';
 
 import graphics from '../img/contact';
 
-const Container = styled.div`
-  margin: 1em auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 40em;
-`;
-
-const Title = styled.h2`
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-`;
-
-const Info = styled.div`
-  text-align: center;
-  display: block;
-  max-width: 37.5em;
-`;
+import { Container, Intro, Title, Paragraph, Input, Button } from './styles';
 
 const FormContainer = styled.div`
   display: flex;
@@ -31,6 +13,7 @@ const Form = styled.form`
   margin: 0 1%;
   width: 63%;
   display: inline-block;
+
   & input,
   textarea {
     width: 100%;
@@ -38,36 +21,17 @@ const Form = styled.form`
 
   & > * {
     margin: 0.75em 0;
-    outline: none;
-
-    &:focus {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    }
   }
 `;
 
-const Input = styled.input`
-  border: solid 1px #999999;
-  border-radius: 15px;
-  padding: 0.6em;
-  font-family: Avenir;
-  box-sizing: border-box;
-
-  &::placeholder {
-    font-style: italic;
-  }
+const Textarea = Input.withComponent('textarea').extend`
+  resize: vertical;
 `;
 
-const Textarea = Input.withComponent('textarea');
-
-const SubmitButton = styled.button`
+const SubmitButton = Button.extend`
   float: right;
-  margin: 0;
-  text-transform: uppercase;
-  font-family: Avenir;
   color: #0a6b94;
   border: solid 1px #0a6b94;
-  border-radius: 18px;
   background: #fff;
   width: 8em;
 `;
@@ -95,16 +59,16 @@ const ListGraphic = styled.img`
   margin-right: 1em;
 `;
 
-function Contact() {
+function Contact({ id }) {
   return (
-    <Container>
-      <Info>
+    <Container small id={id}>
+      <Intro>
         <Title>Contact & Support</Title>
-        <p>
+        <Paragraph>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut eius quia itaque porro, quod
           voluptatum pariatur.
-        </p>
-      </Info>
+        </Paragraph>
+      </Intro>
       <FormContainer>
         <Form>
           <Input type="text" placeholder="Name" />

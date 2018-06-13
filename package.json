@@ -6,6 +6,7 @@
   "dependencies": {
     "prettier-eslint": "^8.8.1",
     "react": "^16.4.0",
+    "react-anchor-link-smooth-scroll": "^1.0.10",
     "react-collapsible": "^2.2.0",
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.3.1",

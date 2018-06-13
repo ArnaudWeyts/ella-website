@@ -4,6 +4,8 @@ import styled, { keyframes, css } from 'styled-components';
 import woman from '../img/woman.svg';
 import close from '../img/close.svg';
 
+import { Button } from './styles';
+
 const Container = styled.div`
   position: fixed;
   bottom: 1.25em;
@@ -46,7 +48,7 @@ const Iframe = styled.iframe`
   max-width: 18.75em;
   max-height: 37.5em;
   background: #fff;
-  margin-bottom: 5em;
+  margin-bottom: 4.25em;
 
   ${({ active }) =>
     active &&
@@ -72,8 +74,7 @@ const ButtonContainer = styled.div`
   right: 0;
 `;
 
-const OpenCloseButton = styled.button`
-  cursor: pointer;
+const OpenCloseButton = Button.extend`
   float: right;
   height: 5em;
   width: 5em;

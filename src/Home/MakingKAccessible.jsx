@@ -1,20 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import whiteCloud from '../img/white-cloud.svg';
+// import whiteCloud from '../img/white-cloud.svg';
 
 import BeforeEllaGraphic from './Graphics/BeforeEllaGraphic';
 import AfterEllaGraphic from './Graphics/AfterEllaGraphic';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1em auto;
-  max-width: 37.5em;
+import { Container, Intro, Title, Paragraph } from './styles';
+
+const TitleForward = Title.extend`
+  z-index: 2;
 `;
 
-const Cloud = styled.div`
+/* const Cloud = styled.div`
   width: 115vw;
   z-index: 1;
   height: 15em;
@@ -31,12 +29,7 @@ const Cloud = styled.div`
   @media (max-width: 600px) {
     background-position-y: 11em;
   }
-`;
-
-const Title = styled.h2`
-  z-index: 2;
-  text-transform: uppercase;
-`;
+`; */
 
 const ImageContainer = styled.div`
   width: 100%;
@@ -46,21 +39,24 @@ const ImageContainer = styled.div`
   margin-top: 1.25em;
 `;
 
-function MakingKAccessible() {
+function MakingKAccessible({ id }) {
   return (
-    <Container>
-      <Cloud />
-      <Title>Making knowledge accessible</Title>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ea maxime, quisquam officia
-        architecto accusamus! Dolores, iusto vero! Natus accusantium quam commodi maxime incidunt
-        perferendis perspiciatis consequuntur qui at odio?
-      </p>
-      <ImageContainer>
-        <BeforeEllaGraphic />
-        <AfterEllaGraphic />
-      </ImageContainer>
-    </Container>
+    <React.Fragment>
+      <Container small id={id}>
+        <Intro>
+          <TitleForward>Making knowledge accessible</TitleForward>
+          <Paragraph>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ea maxime, quisquam
+            officia architecto accusamus! Dolores, iusto vero! Natus accusantium quam commodi maxime
+            incidunt perferendis perspiciatis consequuntur qui at odio?
+          </Paragraph>
+        </Intro>
+        <ImageContainer>
+          <BeforeEllaGraphic />
+          <AfterEllaGraphic />
+        </ImageContainer>
+      </Container>
+    </React.Fragment>
   );
 }
 

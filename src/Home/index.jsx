@@ -16,6 +16,13 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
+const Anchor = styled.a`
+  display: block;
+  position: relative;
+  top: -7em;
+  visibility: hidden;
+`;
+
 const Video = styled.video`
   width: 100%;
   height: 31.25em;
@@ -24,15 +31,19 @@ const Video = styled.video`
 
 const Home = () => (
   <Container>
+    <Anchor id="home" />
     <Header />
     <Video>
       <source />
       Your browser does not support the video tag.
     </Video>
+    <Anchor id="about" />
     <MakingKAccessible />
     <ANewWay />
     <WhyChooseElla />
+    <Anchor id="service" />
     <WhoCanBenefitFromElla />
+    <Anchor id="contact" />
     <Contact />
     <Footer />
     <Webchat />
