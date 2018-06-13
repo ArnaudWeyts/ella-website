@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 import ellaLogo from '../img/ella-logo.svg';
 
@@ -33,18 +32,6 @@ const NavLink = styled.a`
   border-bottom: ${({ selected }) => (selected ? 'solid 2px #eb8018;' : 0)};
 `;
 
-const TryMe = styled.button`
-  cursor: pointer;
-  height: 3em;
-  width: 8em;
-  text-transform: uppercase;
-  font-family: Avenir;
-  color: #147ab8;
-  border: solid 1px #147ab8;
-  border-radius: 5px;
-  background: #fff;
-`;
-
 function HeaderContainer() {
   return (
     <Header>
@@ -59,15 +46,6 @@ function HeaderContainer() {
         <NavLink href="#">Service</NavLink>
         <NavLink href="#">Contact</NavLink>
       </HeaderMenu>
-      <Link
-        style={{
-          position: 'absolute',
-          right: '1em',
-        }}
-        to={`${process.env.PUBLIC_URL}/demo`}
-      >
-        <TryMe>Try me</TryMe>
-      </Link>
     </Header>
   );
 }
