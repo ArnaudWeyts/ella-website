@@ -5,6 +5,7 @@ import Header from './Header';
 import MakingKAccessible from './MakingKAccessible';
 import ANewWay from './ANewWay';
 import WhyChooseElla from './WhyChooseElla';
+import WhoCanBenefitFromElla from './WhoCanBenefitFromElla';
 import Contact from './Contact';
 import Footer from './Footer';
 import Webchat from './Webchat';
@@ -31,6 +32,7 @@ const Home = () => (
     <MakingKAccessible />
     <ANewWay />
     <WhyChooseElla />
+    <WhoCanBenefitFromElla />
     <Contact />
     <Footer />
     <Webchat />

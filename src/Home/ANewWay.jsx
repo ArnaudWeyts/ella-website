@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import search from '../img/search.svg';
-import kf from '../img/kf.svg';
-import answer from '../img/answer.svg';
+import graphics from '../img/aNewWay';
 
 const Container = styled.div`
   display: flex;
@@ -79,7 +77,7 @@ const ANewWay = () => (
       </Paragraph>
       <ImageContainer>
         <Segment>
-          <img src={search} alt="search" />
+          <img src={graphics.search} alt="search" />
           <SegmentTitle>Search</SegmentTitle>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
@@ -88,7 +86,7 @@ const ANewWay = () => (
           </p>
         </Segment>
         <Segment>
-          <img src={kf} alt="kf" />
+          <img src={graphics.kf} alt="kf" />
           <SegmentTitle>KnowledgeFlow</SegmentTitle>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
@@ -97,7 +95,7 @@ const ANewWay = () => (
           </p>
         </Segment>
         <Segment>
-          <img src={answer} alt="answer" />
+          <img src={graphics.answer} alt="answer" />
           <SegmentTitle>Answer</SegmentTitle>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
