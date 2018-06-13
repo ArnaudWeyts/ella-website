@@ -13,7 +13,6 @@ const Container = styled.div`
 
 const Title = styled.h2`
   text-transform: uppercase;
-  width: 100%;
   text-align: center;
 `;
 
