@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import graphics from '../img/contact';
+
 const Container = styled.div`
   margin: 1em auto;
   display: flex;
@@ -26,19 +28,28 @@ const FormContainer = styled.div`
 `;
 
 const Form = styled.form`
-  margin 0 1%;
+  margin: 0 1%;
   width: 63%;
   display: inline-block;
   & input,
   textarea {
     width: 100%;
   }
+
+  & > * {
+    margin: 0.75em 0;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+  }
 `;
 
 const Input = styled.input`
-  border: solid 1px lightgrey;
-  border-radius: 8px;
-  padding: 0.4em;
+  border: solid 1px #999999;
+  border-radius: 15px;
+  padding: 0.6em;
   font-family: Avenir;
   box-sizing: border-box;
 
@@ -54,19 +65,34 @@ const SubmitButton = styled.button`
   margin: 0;
   text-transform: uppercase;
   font-family: Avenir;
-  color: #147ab8;
-  border: solid 1px #147ab8;
-  border-radius: 5px;
+  color: #0a6b94;
+  border: solid 1px #0a6b94;
+  border-radius: 18px;
   background: #fff;
   width: 8em;
 `;
 
 const List = styled.ul`
-  margin: 0 1%;
+  margin: 0 3%;
   list-style: none;
   padding: 0;
   width: 33%;
   display: inline-block;
+
+  & li {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin: 2em 0;
+    }
+  }
+`;
+
+const ListGraphic = styled.img`
+  width: 2em;
+  height: 2em;
+  margin-right: 1em;
 `;
 
 function Contact() {
@@ -88,9 +114,15 @@ function Contact() {
           <SubmitButton type="submit">Send</SubmitButton>
         </Form>
         <List>
-          <li>Lorem ipsum dolor it</li>
-          <li>Lorem ipsum dolor it</li>
-          <li>Lorem ipsum dolor it</li>
+          <li>
+            <ListGraphic src={graphics.location} alt="" />Lorem ipsum
+          </li>
+          <li>
+            <ListGraphic src={graphics.email} alt="" />Lorem ipsum
+          </li>
+          <li>
+            <ListGraphic src={graphics.phone} alt="" />Lorem ipsum
+          </li>
         </List>
       </FormContainer>
     </Container>
