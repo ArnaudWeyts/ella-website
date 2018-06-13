@@ -1,26 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const spinReverse = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(-360deg);
-  }
-`;
-
 const Svg = styled.svg`
   width: 50%;
 
@@ -91,6 +71,53 @@ const Svg = styled.svg`
   }
 `;
 
+const spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const spinReverse = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+`;
+
+const hang = keyframes`
+  0% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+`;
+
+const forwardBack = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
+
 const Gear = styled.path`
   transform-origin: center center;
   transform-box: fill-box;
@@ -104,9 +131,21 @@ const GearBack = Gear.extend`
   animation: ${spinReverse} 4s linear infinite;
 `;
 
+const Pdf = styled.g`
+  animation: ${hang} 1.5s ease-in-out infinite;
+`;
+
+const Doc = styled.g`
+  animation: ${hang} 2s ease-in-out infinite;
+`;
+
+const PlayerCircle = styled.circle`
+  animation: ${forwardBack} 10s ease-out infinite;
+`;
+
 const BeforeEllaGraphic = () => (
   <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.2 344.28">
-    <title>Asset 46</title>
+    <title>Before Ella</title>
     <g id="Layer_2" data-name="Layer 2">
       <g id="Layer_1-2" data-name="Layer 1">
         <g>
@@ -192,10 +231,10 @@ const BeforeEllaGraphic = () => (
           <g id="player">
             <path d="M62.81,113.92H61.12l-.61-.07A14.49,14.49,0,0,1,47.75,102c-.1-.55-.15-1.11-.23-1.67s0-1.13,0-1.69c0-.36.08-.72.13-1.08A14.48,14.48,0,0,1,63.41,85.12a13.78,13.78,0,0,1,8,3.49,14.14,14.14,0,0,1,4.94,10.24,13.74,13.74,0,0,1-2,8,14.23,14.23,0,0,1-9.91,6.84C63.91,113.8,63.36,113.84,62.81,113.92ZM74.15,99.48A12.18,12.18,0,1,0,62,111.66,12.2,12.2,0,0,0,74.15,99.48Z" />
             <path d="M57.9,99.48q0-2.57,0-5.13c0-.1,0-.21,0-.31A.7.7,0,0,1,59,93.4c.8.42,1.57.89,2.35,1.34l6.71,3.92a2.2,2.2,0,0,1,.51.4.59.59,0,0,1,0,.84,2,2,0,0,1-.46.37l-8.83,5.16c-.87.5-1.37.21-1.37-.79Q57.9,102.06,57.9,99.48Z" />
-            <circle cx="48.84" cy="122.14" r="3.51" />
+            <PlayerCircle cx="48.84" cy="122.14" r="3.51" />
             <rect x="40.37" y="120.3" width="43.2" height="3.68" rx="1.84" ry="1.84" />
           </g>
-          <g id="doc">
+          <Doc id="doc">
             <g>
               <path d="M22.85,40.43V34.74H4.39A4.39,4.39,0,0,0,0,39.14V74.6A4.39,4.39,0,0,0,4.39,79H34.62A4.39,4.39,0,0,0,39,74.6V50.91H33.33A10.51,10.51,0,0,1,22.85,40.43ZM34.72,70.84a4.08,4.08,0,0,1-4.08,4.08H8.37a4.08,4.08,0,0,1-4.08-4.08V53.67H34.72Z" />
               <path d="M34.85,34.74H25v4.92a9.09,9.09,0,0,0,9.06,9.06H39V38.91A4.16,4.16,0,0,0,34.85,34.74Z" />
@@ -220,8 +259,8 @@ const BeforeEllaGraphic = () => (
             </g>
             <line className="cls-10" x1="8.15" y1="56.87" x2="31" y2="56.87" />
             <line className="cls-10" x1="8.15" y1="61.24" x2="31" y2="61.24" />
-          </g>
-          <g id="pdf">
+          </Doc>
+          <Pdf id="pdf">
             <g>
               <path d="M72,6.51V0H50.91a5,5,0,0,0-5,5V45.64a5,5,0,0,0,5,5H85.52a5,5,0,0,0,5-5V18.51H84A12,12,0,0,1,72,6.51ZM85.63,41.33A4.67,4.67,0,0,1,81,46H55.47a4.67,4.67,0,0,1-4.67-4.67V21.67H85.63Z" />
               <path d="M85.78,0H74.54V5.63A10.41,10.41,0,0,0,84.92,16h5.63V4.77A4.77,4.77,0,0,0,85.78,0Z" />
@@ -244,7 +283,7 @@ const BeforeEllaGraphic = () => (
               />
               <path className="cls-3" d="M64.85,11h4.53v1.38H66.53v1.69H69.2v1.36H66.53v3H64.85Z" />
             </g>
-          </g>
+          </Pdf>
           <ellipse id="base" className="cls-3" cx="106.24" cy="338.61" rx="92.96" ry="5.66" />
         </g>
       </g>
