@@ -5,22 +5,6 @@ import graphics from '../img/aNewWay';
 
 import { Container, Intro, Title, SubTitle, Paragraph } from './styles';
 
-const Banner = styled.div`
-  width: 100vw;
-  height: 10em;
-  line-height: 10em;
-  text-align: center;
-  background: #0d8ec5;
-`;
-
-const BannerTitle = styled.h3`
-  margin: 0;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 48px;
-  font-style: italic;
-`;
-
 const HowItWorks = styled.div`
   margin: 1.25em 3em;
   max-width: 70em;
@@ -46,9 +30,6 @@ const Segment = styled.div`
 
 const ANewWay = () => (
   <Container>
-    <Banner>
-      <BannerTitle>A new way to store and access knowledge</BannerTitle>
-    </Banner>
     <HowItWorks>
       <Intro>
         <Title>How it works</Title>

@@ -16,6 +16,7 @@ export const Intro = styled.div`
 `;
 
 export const Title = styled.h2`
+  color: ${props => (props.color ? props.color : '#000')};
   text-transform: uppercase;
   text-align: center;
   font-size: 30px;
@@ -24,6 +25,7 @@ export const Title = styled.h2`
 export const SubTitle = styled.h3``;
 
 export const Paragraph = styled.p`
+  color: ${props => (props.color ? props.color : '#000')};
   text-align: center;
   max-width: 56.25em;
   font-size: 20px;
@@ -51,7 +53,12 @@ export const Input = BaseInput.extend`
 
 export const Button = BaseInput.withComponent('button').extend`
   cursor: pointer;
+  color: #fff;
+  font-weight: bold;
   border: none;
   border-radius: 18px;
   text-transform: uppercase;
+  background: transparent;
+  border: solid 2px #fff;
+  padding: 0.5em 1em;
 `;

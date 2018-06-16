@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import ellaLogo from '../img/ella-logo.svg';
+import { Button } from './styles';
+
+import ellaLogoMonoWhite from '../img/ella-logo-mono-white.svg';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/href-no-hash */
 
 const Header = styled.header`
-  height: 3em;
+  height: 7em;
   padding: 2em;
   display: flex;
   align-items: center;
@@ -16,16 +18,33 @@ const Header = styled.header`
   position: fixed;
   width: 100%;
   z-index: 3;
+  box-sizing: border-box;
 `;
 
 const HeaderMenu = styled.nav`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
+`;
+
+const LogoLink = styled(AnchorLink)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex: 1;
 `;
 
 const HeaderLogo = styled.img`
   height: 2.5em;
+`;
+
+const HeaderLogoText = styled.span`
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
 `;
 
 const NavLink = styled(AnchorLink)`
@@ -35,6 +54,14 @@ const NavLink = styled(AnchorLink)`
   color: #fff;
   font-weight: bold;
   border-bottom: ${({ selected }) => (selected ? 'solid 2px #eb8018;' : 0)};
+`;
+
+const HeaderSide = styled.div`
+  flex: 1;
+`;
+
+const HeaderButton = Button.extend`
+  float: right;
 `;
 
 class HeaderContainer extends Component {
@@ -78,6 +105,12 @@ class HeaderContainer extends Component {
     const { active } = this.state;
     return (
       <Header>
+        <HeaderSide>
+          <LogoLink onClick={() => this.setActive('home')} href="#home">
+            <HeaderLogo src={ellaLogoMonoWhite} alt="Ella logo" />
+            <HeaderLogoText>Ella</HeaderLogoText>
+          </LogoLink>
+        </HeaderSide>
         <HeaderMenu>
           <NavLink selected={active === 'home'} onClick={() => this.setActive('home')} href="#home">
             Home
@@ -88,9 +121,6 @@ class HeaderContainer extends Component {
             href="#about"
           >
             About
-          </NavLink>
-          <NavLink onClick={() => this.setActive('home')} href="#home">
-            <HeaderLogo src={ellaLogo} alt="Ella logo" />
           </NavLink>
           <NavLink
             onClick={() => this.setActive('service')}
@@ -107,6 +137,9 @@ class HeaderContainer extends Component {
             Contact
           </NavLink>
         </HeaderMenu>
+        <HeaderSide>
+          <HeaderButton>Ask us a question</HeaderButton>
+        </HeaderSide>
       </Header>
     );
   }
