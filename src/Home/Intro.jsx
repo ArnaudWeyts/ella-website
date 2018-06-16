@@ -5,13 +5,14 @@ import { Title, Paragraph, Button } from './styles';
 
 const Container = styled.div`
   margin-top: 7em;
-  height: 30em;
+  height: 28em;
   padding: 2em;
   background: #a1bdc9;
 `;
 
 const Left = styled.div`
-  width: 66%;
+  height: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
