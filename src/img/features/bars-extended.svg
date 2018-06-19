@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1366 280.96">
+  <defs>
+    <linearGradient id="linear-gradient" y1="20.06" x2="1208.64" y2="20.06" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d8ec5"/>
+      <stop offset="0.21" stop-color="#1190c6"/>
+      <stop offset="0.42" stop-color="#1e96c9"/>
+      <stop offset="0.64" stop-color="#329fce"/>
+      <stop offset="0.85" stop-color="#4fadd4"/>
+      <stop offset="1" stop-color="#67b8da"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="20.06" x2="903.64" y2="20.06" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0" y1="20.06" x2="677.82" y2="20.06" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="0" y1="60.33" x2="1366" y2="60.33" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="0" y1="60.33" x2="934.16" y2="60.33" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="0" y1="60.33" x2="541.97" y2="60.33" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="0" y1="100.45" x2="1366" y2="100.45" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="0" y1="140.56" x2="997.34" y2="140.56" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-9" x1="0" y1="140.56" x2="902.64" y2="140.56" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-10" x1="0" y1="140.56" x2="676.82" y2="140.56" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-11" x1="0" y1="180.67" x2="1263.85" y2="180.67" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-12" x1="0" y1="180.67" x2="721.73" y2="180.67" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-13" x1="0" y1="180.67" x2="478.68" y2="180.67" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-14" x1="0" y1="220.79" x2="1366" y2="220.79" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-15" x1="0" y1="220.79" x2="934.15" y2="220.79" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-16" x1="0" y1="220.79" x2="542.59" y2="220.79" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-17" x1="0" y1="220.79" x2="290.09" y2="220.79" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-18" x1="0" y1="260.9" x2="645.37" y2="260.9" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>bars-extended</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect width="1208.64" height="40.11" style="fill: url(#linear-gradient)"/>
+        <rect width="903.64" height="40.11" style="fill: url(#linear-gradient-2)"/>
+        <rect width="677.82" height="40.11" style="fill: url(#linear-gradient-3)"/>
+      </g>
+      <g>
+        <rect y="40.28" width="1366" height="40.11" style="fill: url(#linear-gradient-4)"/>
+        <rect y="40.28" width="934.16" height="40.11" style="fill: url(#linear-gradient-5)"/>
+        <rect y="40.28" width="541.97" height="40.11" style="fill: url(#linear-gradient-6)"/>
+      </g>
+      <rect y="80.39" width="1366" height="40.11" style="fill: url(#linear-gradient-7)"/>
+      <g>
+        <rect y="120.5" width="997.34" height="40.11" style="fill: url(#linear-gradient-8)"/>
+        <rect y="120.5" width="902.64" height="40.11" style="fill: url(#linear-gradient-9)"/>
+        <rect y="120.5" width="676.82" height="40.11" style="fill: url(#linear-gradient-10)"/>
+      </g>
+      <g>
+        <rect y="160.62" width="1263.85" height="40.11" style="fill: url(#linear-gradient-11)"/>
+        <rect y="160.62" width="721.73" height="40.11" style="fill: url(#linear-gradient-12)"/>
+        <rect y="160.62" width="478.68" height="40.11" style="fill: url(#linear-gradient-13)"/>
+      </g>
+      <g>
+        <rect y="200.73" width="1366" height="40.11" style="fill: url(#linear-gradient-14)"/>
+        <rect y="200.73" width="934.15" height="40.11" style="fill: url(#linear-gradient-15)"/>
+        <rect y="200.73" width="542.59" height="40.11" style="fill: url(#linear-gradient-16)"/>
+        <rect y="200.73" width="290.09" height="40.11" style="fill: url(#linear-gradient-17)"/>
+      </g>
+      <rect y="240.84" width="645.37" height="40.11" style="fill: url(#linear-gradient-18)"/>
+    </g>
+  </g>
+</svg>

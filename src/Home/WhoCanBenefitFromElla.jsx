@@ -41,9 +41,6 @@ const SegmentParagraph = styled.p`
 
 const DemoButton = Button.extend`
   background: #0d8ec5;
-  color: #000;
-  height: 3em;
-  width: 8em;
 `;
 
 const WhoCanBenefitFromElla = ({ id }) => (
@@ -58,7 +55,7 @@ const WhoCanBenefitFromElla = ({ id }) => (
     <Content>
       <Segment backgroundColor="#e2f1f8" available>
         <Graphic src={graphics.personRetail} />
-        <SubTitle>Retail</SubTitle>
+        <SubTitle noUnderline>Retail</SubTitle>
         <SegmentParagraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
           nesciunt in. Velit mollitia rem impedit, at.
@@ -69,7 +66,7 @@ const WhoCanBenefitFromElla = ({ id }) => (
       </Segment>
       <Segment backgroundColor="#fcefe3">
         <Graphic src={graphics.personProduction} />
-        <SubTitle>Production</SubTitle>
+        <SubTitle noUnderline>Production</SubTitle>
         <SegmentParagraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
           nesciunt in. Velit mollitia rem impedit, at.
@@ -78,7 +75,7 @@ const WhoCanBenefitFromElla = ({ id }) => (
       </Segment>
       <Segment backgroundColor="#f9e5e5">
         <Graphic src={graphics.personServices} />
-        <SubTitle>Services</SubTitle>
+        <SubTitle noUnderline>Services</SubTitle>
         <SegmentParagraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
           nesciunt in. Velit mollitia rem impedit, at.
@@ -87,7 +84,7 @@ const WhoCanBenefitFromElla = ({ id }) => (
       </Segment>
       <Segment backgroundColor="#e7f2e8">
         <Graphic src={graphics.personTraining} />
-        <SubTitle>Training</SubTitle>
+        <SubTitle noUnderline>Training</SubTitle>
         <SegmentParagraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
           nesciunt in. Velit mollitia rem impedit, at.

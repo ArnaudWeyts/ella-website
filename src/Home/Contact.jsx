@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import graphics from '../img/contact';
 
-import { Container, Intro, Title, Paragraph, Input, Button } from './styles';
+import { Container, Intro, Title, Paragraph, Input, Button, Triangle } from './styles';
 
 const FormContainer = styled.div`
   display: flex;
@@ -62,6 +62,8 @@ const ListGraphic = styled.img`
 function Contact({ id }) {
   return (
     <Container small id={id}>
+      <Triangle color="#0d8ec5" leftTop />
+      <Triangle color="#71c0db" rightBottom />
       <Intro>
         <Title>Contact & Support</Title>
         <Paragraph>

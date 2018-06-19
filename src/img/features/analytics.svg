@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.7 116.7">
+  <title>analyitics</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <rect x="1.5" y="1.5" width="113.7" height="113.7" rx="25.8" ry="25.8" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 3px"/>
+        <g>
+          <path d="M61.34,55.36H96A34.62,34.62,0,0,0,61.34,20.74Z" style="fill: #fff"/>
+          <path d="M90,61.34A34.62,34.62,0,1,1,55.36,26.72V61.34Z" style="fill: #fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

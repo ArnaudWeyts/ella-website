@@ -14,8 +14,7 @@ const Header = styled.header`
   padding: 2em;
   display: flex;
   align-items: center;
-  background: #a1bdc9;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 3;
   box-sizing: border-box;
@@ -49,7 +48,7 @@ const HeaderLogoText = styled.span`
 
 const NavLink = styled(AnchorLink)`
   font-size: 20px;
-  margin: 0 1em;
+  margin: 0 1.5em;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -137,9 +136,7 @@ class HeaderContainer extends Component {
             Contact
           </NavLink>
         </HeaderMenu>
-        <HeaderSide>
-          <HeaderButton>Ask us a question</HeaderButton>
-        </HeaderSide>
+        <HeaderSide>{/* <HeaderButton>Ask us a question</HeaderButton> */}</HeaderSide>
       </Header>
     );
   }

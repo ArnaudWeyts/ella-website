@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import blueCloud from '../img/blue-cloud.svg';
-
 const Footer = styled.footer``;
 
 const Cloud = styled.div`
-  background: url(${blueCloud});
   width: 120vw;
   height: 5em;
   background-size: 110%;
