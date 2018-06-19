@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.7 116.7">
+  <title>screen-mini</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <g>
+          <path d="M42.83,87.78s8.55.89,8.55-9.6H65.32c0,10.5,8.55,9.6,8.55,9.6Z" style="fill: #fff"/>
+          <rect x="42.83" y="87.78" width="31.04" height="4.02" style="fill: #fff"/>
+          <path d="M19.88,70.39V75A3.16,3.16,0,0,0,23,78.17h70.6A3.16,3.16,0,0,0,96.82,75V70.39Zm38.47,5.68a1.79,1.79,0,1,1,1.8-1.79A1.79,1.79,0,0,1,58.35,76.07Z" style="fill: #fff"/>
+          <path d="M93,24.9H23.73a3.85,3.85,0,0,0-3.85,3.85V70.39H96.82V28.75A3.85,3.85,0,0,0,93,24.9Zm-.2,41.84H23.93V28.55H92.77Z" style="fill: #fff"/>
+        </g>
+        <rect x="1.5" y="1.5" width="113.7" height="113.7" rx="25.8" ry="25.8" style="fill: none;stroke: #fff;stroke-miterlimit: 10;stroke-width: 3px"/>
+      </g>
+    </g>
+  </g>
+</svg>

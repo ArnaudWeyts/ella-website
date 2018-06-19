@@ -1,42 +1,46 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import graphics from '../img/aNewWay';
+import graphics from '../img/howItWorks';
 
-import { Container, Intro, Title, SubTitle, Paragraph } from './styles';
+import { Container, Intro, Title, SubTitle, Paragraph, Triangle } from './styles';
 
-const Banner = styled.div`
-  width: 100vw;
-  height: 10em;
-  line-height: 10em;
-  text-align: center;
-  background: #0d8ec5;
-`;
-
-const BannerTitle = styled.h3`
-  margin: 0;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 48px;
-  font-style: italic;
-`;
-
-const HowItWorks = styled.div`
-  margin: 1.25em 3em;
+const InnerContainer = styled.div`
   max-width: 70em;
-  background: #f2f2f2;
   border-radius: 2px;
-  padding: 1.25em 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const VideoContainer = styled.div`
+  display: flex;
+  height: 25em;
+  width: 100%;
+  justify-content: center;
+  margin: 2em 0;
+`;
+
+const ChatGraphics = styled.div`
+  width: 33%;
+  background: url(${props => props.background});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+`;
+
+const VideoBackground = styled.div`
+  width: 66%;
+  background: url(${graphics.ipad});
+  background-repeat: no-repeat;
+  background-size: contain;
 `;
 
 const ImageContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 3em;
+  margin-top: 3em;
 `;
 
 const Segment = styled.div`
@@ -44,12 +48,11 @@ const Segment = styled.div`
   text-align: center;
 `;
 
-const ANewWay = () => (
+const HowItWorks = () => (
   <Container>
-    <Banner>
-      <BannerTitle>A new way to store and access knowledge</BannerTitle>
-    </Banner>
-    <HowItWorks>
+    <Triangle color="#0d8ec5" rightTop />
+    <Triangle color="#71c0db" leftBottom />
+    <InnerContainer>
       <Intro>
         <Title>How it works</Title>
         <Paragraph>
@@ -58,6 +61,11 @@ const ANewWay = () => (
           provident, neque adipisci quisquam animi esse repellat!
         </Paragraph>
       </Intro>
+      <VideoContainer>
+        <ChatGraphics background={graphics.chatsLeft} />
+        <VideoBackground />
+        <ChatGraphics background={graphics.chatsRight} />
+      </VideoContainer>
       <ImageContainer>
         <Segment>
           <img src={graphics.search} alt="search" />
@@ -87,8 +95,8 @@ const ANewWay = () => (
           </p>
         </Segment>
       </ImageContainer>
-    </HowItWorks>
+    </InnerContainer>
   </Container>
 );
 
-export default ANewWay;
+export default HowItWorks;

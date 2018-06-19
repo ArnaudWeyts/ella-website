@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from './Header';
+import Intro from './Intro';
 import MakingKAccessible from './MakingKAccessible';
-import ANewWay from './ANewWay';
-import WhyChooseElla from './WhyChooseElla';
+import HowItWorks from './HowItWorks';
+import Features from './Features';
 import WhoCanBenefitFromElla from './WhoCanBenefitFromElla';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -23,24 +24,15 @@ const Anchor = styled.a`
   visibility: hidden;
 `;
 
-const Video = styled.video`
-  width: 100%;
-  height: 31.25em;
-  background: #a1bdc9;
-`;
-
 const Home = () => (
   <Container>
     <Anchor id="home" />
     <Header />
-    <Video>
-      <source />
-      Your browser does not support the video tag.
-    </Video>
+    <Intro />
     <Anchor id="about" />
     <MakingKAccessible />
-    <ANewWay />
-    <WhyChooseElla />
+    <HowItWorks />
+    <Features />
     <Anchor id="service" />
     <WhoCanBenefitFromElla />
     <Anchor id="contact" />
