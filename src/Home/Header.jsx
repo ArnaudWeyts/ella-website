@@ -59,10 +59,6 @@ const HeaderSide = styled.div`
   flex: 1;
 `;
 
-const HeaderButton = Button.extend`
-  float: right;
-`;
-
 class HeaderContainer extends Component {
   constructor(props) {
     super(props);
