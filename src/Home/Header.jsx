@@ -1,23 +1,55 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { Button } from './styles';
-
 import ellaLogoMonoWhite from '../img/ella-logo-mono-white.svg';
+import ellaLogo from '../img/ella-logo.svg';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/href-no-hash */
+
+const HeaderLogoText = styled.span`
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+`;
+
+const NavLink = styled(AnchorLink)`
+  font-size: 20px;
+  margin: 0 1.5em;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: ${({ selected }) => (selected ? 'solid 2px #eb8018;' : 0)};
+`;
 
 const Header = styled.header`
   height: 7em;
   padding: 2em;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 3;
   box-sizing: border-box;
+  transition: background 0.5s ease-in-out;
+
+  ${props =>
+    props.inverted &&
+    css`
+      background: #fff;
+      box-shadow: rgba(0, 0, 0, 0.0588235) 0px 2px 1px 0px;
+
+      & ${HeaderLogoText} {
+        color: #000;
+      }
+
+      & ${NavLink} {
+        color: #000;
+      }
+    `};
 `;
 
 const HeaderMenu = styled.nav`
@@ -38,23 +70,6 @@ const HeaderLogo = styled.img`
   height: 2.5em;
 `;
 
-const HeaderLogoText = styled.span`
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
-`;
-
-const NavLink = styled(AnchorLink)`
-  font-size: 20px;
-  margin: 0 1.5em;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  border-bottom: ${({ selected }) => (selected ? 'solid 2px #eb8018;' : 0)};
-`;
-
 const HeaderSide = styled.div`
   flex: 1;
 `;
@@ -66,9 +81,12 @@ class HeaderContainer extends Component {
     this.state = {
       active: 'home',
       userScroll: true,
+      inverted: false,
     };
 
     this.setActive = this.setActive.bind(this);
+
+    this.container = React.createRef();
   }
 
   componentDidMount() {
@@ -88,6 +106,11 @@ class HeaderContainer extends Component {
           this.setState({ active: 'contact' });
         }
       }
+      if (window.scrollY > this.container.current.clientHeight / 2) {
+        this.setState({ inverted: true });
+      } else {
+        this.setState({ inverted: false });
+      }
     });
   }
 
@@ -97,12 +120,12 @@ class HeaderContainer extends Component {
   }
 
   render() {
-    const { active } = this.state;
+    const { active, inverted } = this.state;
     return (
-      <Header>
+      <Header innerRef={this.container} inverted={inverted}>
         <HeaderSide>
           <LogoLink onClick={() => this.setActive('home')} href="#home">
-            <HeaderLogo src={ellaLogoMonoWhite} alt="Ella logo" />
+            <HeaderLogo src={inverted ? ellaLogo : ellaLogoMonoWhite} alt="Ella logo" />
             <HeaderLogoText>Ella</HeaderLogoText>
           </LogoLink>
         </HeaderSide>
