@@ -1,7 +1,7 @@
 {
   "name": "ella-website",
   "version": "0.1.0",
-  "homepage": "https://b-aim-knowledgeflow.github.io/website/",
+  "homepage": "https://ella.netlify.com",
   "private": true,
   "dependencies": {
     "prettier-eslint": "^8.8.1",
