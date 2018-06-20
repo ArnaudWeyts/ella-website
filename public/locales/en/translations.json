@@ -32,6 +32,7 @@
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa."
   },
   "features": {
+    "title": "Features",
     "customizable": "Customizable",
     "anyDevice": "Any device",
     "analytics": "Analytics",
