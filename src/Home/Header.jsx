@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import ellaLogoMonoWhite from '../img/ella-logo-mono-white.svg';
-import ellaLogo from '../img/ella-logo.svg';
+import logos from '../img/logos';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/href-no-hash */
@@ -125,7 +124,7 @@ class HeaderContainer extends Component {
       <Header innerRef={this.container} inverted={inverted}>
         <HeaderSide>
           <LogoLink onClick={() => this.setActive('home')} href="#home">
-            <HeaderLogo src={inverted ? ellaLogo : ellaLogoMonoWhite} alt="Ella logo" />
+            <HeaderLogo src={inverted ? logos.ellaColor : logos.ellaMonoWhite} alt="Ella logo" />
             <HeaderLogoText>Ella</HeaderLogoText>
           </LogoLink>
         </HeaderSide>

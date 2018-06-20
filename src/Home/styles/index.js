@@ -130,3 +130,8 @@ export const Triangle = styled.div`
       border-left: 100vw solid transparent;
     `};
 `;
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: #fff;
+`;
