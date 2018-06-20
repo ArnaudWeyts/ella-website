@@ -61,7 +61,7 @@ const ListGraphic = styled.img`
 
 function Contact({ id }) {
   return (
-    <Container small id={id}>
+    <Container style={{ padding: '0 2em' }} small id={id}>
       <Triangle color="#0d8ec5" leftTop />
       <Triangle color="#71c0db" rightBottom />
       <Intro>

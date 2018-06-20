@@ -9,9 +9,12 @@ import graphics from '../img/whoCanBFromElla';
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 2em;
   margin: 2em auto;
   max-width: 70em;
+
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Segment = styled.div`
@@ -23,6 +26,16 @@ const Segment = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 900px) {
+    width: 40%;
+    margin: 1em 0;
+  }
+
+  @media (max-width: 750px) {
+    width: 100%;
+    margin: 1em 0;
+  }
 
   ${props =>
     !props.available &&
@@ -44,7 +57,7 @@ const DemoButton = Button.extend`
 `;
 
 const WhoCanBenefitFromElla = ({ id }) => (
-  <Container id={id}>
+  <Container style={{ margin: '0 2em' }} id={id}>
     <Intro>
       <Title>Who can benefit From Ella?</Title>
       <Paragraph>

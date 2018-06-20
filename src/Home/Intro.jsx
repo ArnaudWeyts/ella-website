@@ -52,6 +52,8 @@ const Container = styled.div`
 const InnerContainer = styled.div`
   max-width: 60em;
   margin: 0 auto;
+  padding: 0 2em;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   height: 100%;

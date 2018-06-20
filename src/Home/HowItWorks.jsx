@@ -7,6 +7,7 @@ import { Container, Intro, Title, SubTitle, Paragraph, Triangle } from './styles
 
 const InnerContainer = styled.div`
   max-width: 70em;
+  margin: 0 2em;
   border-radius: 2px;
   display: flex;
   flex-direction: column;
@@ -34,6 +35,7 @@ const VideoBackground = styled.div`
   background: url(${graphics.ipad});
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
 `;
 
 const ImageContainer = styled.div`
@@ -41,11 +43,21 @@ const ImageContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-top: 3em;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 const Segment = styled.div`
   margin: 1em 3em;
   text-align: center;
+  min-width: 5em;
+
+  & img {
+    max-width: 20em;
+    margin: 3em 0;
+  }
 `;
 
 const HowItWorks = () => (

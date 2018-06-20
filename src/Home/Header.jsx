@@ -3,6 +3,11 @@ import styled, { css } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import logos from '../img/logos';
+import close from '../img/close.svg';
+import menuBlack from '../img/menu-black.svg';
+import menuWhite from '../img/menu-white.svg';
+
+import { Link } from './styles';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/href-no-hash */
@@ -56,6 +61,31 @@ const HeaderMenu = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.75s ease-in-out;
+
+  & ${Link} {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    transform: ${props => (props.show ? 'translateX(0)' : 'translateX(100vw)')};
+    padding: 3em 0;
+    position: absolute;
+    height: 100vh;
+    flex-direction: column;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    background: #fff;
+
+    & ${NavLink} {
+      color: #000;
+    }
+
+    & ${Link} {
+      display: block;
+    }
+  }
 `;
 
 const LogoLink = styled(AnchorLink)`
@@ -73,6 +103,15 @@ const HeaderSide = styled.div`
   flex: 1;
 `;
 
+const MenuButton = Link.extend`
+  float: right;
+  height: 2em;
+
+  @media (min-width: 800px) {
+    display: none;
+  }
+`;
+
 class HeaderContainer extends Component {
   constructor(props) {
     super(props);
@@ -81,9 +120,11 @@ class HeaderContainer extends Component {
       active: 'home',
       userScroll: true,
       inverted: false,
+      showMenu: false,
     };
 
     this.setActive = this.setActive.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
 
     this.container = React.createRef();
   }
@@ -118,11 +159,16 @@ class HeaderContainer extends Component {
 
   setActive(page) {
     this.setState({ active: page, userScroll: false });
+    this.toggleMenu();
     setTimeout(() => this.setState({ userScroll: true }), 3000);
   }
 
+  toggleMenu() {
+    this.setState({ showMenu: !this.state.showMenu });
+  }
+
   render() {
-    const { active, inverted } = this.state;
+    const { active, inverted, showMenu } = this.state;
     return (
       <Header innerRef={this.container} inverted={inverted}>
         <HeaderSide>
@@ -131,7 +177,10 @@ class HeaderContainer extends Component {
             <HeaderLogoText>Ella</HeaderLogoText>
           </LogoLink>
         </HeaderSide>
-        <HeaderMenu>
+        <HeaderMenu show={showMenu}>
+          <Link style={{ flexGrow: '1' }} onClick={this.toggleMenu}>
+            <img style={{ height: '3em' }} src={close} alt="closeIcon" />
+          </Link>
           <NavLink selected={active === 'home'} onClick={() => this.setActive('home')} href="#home">
             Home
           </NavLink>
@@ -156,8 +205,17 @@ class HeaderContainer extends Component {
           >
             Contact
           </NavLink>
+          <div style={{ flexGrow: '1', height: '3em' }} />
         </HeaderMenu>
-        <HeaderSide>{/* <HeaderButton>Ask us a question</HeaderButton> */}</HeaderSide>
+        <HeaderSide>
+          <MenuButton onClick={this.toggleMenu}>
+            <img
+              src={inverted ? menuBlack : menuWhite}
+              style={{ height: '100%' }}
+              alt="menu icon"
+            />
+          </MenuButton>
+        </HeaderSide>
       </Header>
     );
   }

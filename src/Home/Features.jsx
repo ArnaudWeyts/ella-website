@@ -16,6 +16,10 @@ const InnerContainer = styled.ul`
     margin: 0 2em;
     text-align: center;
     max-width: 10em;
+    min-width: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     img {
       width: 80%;

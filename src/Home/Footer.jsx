@@ -23,6 +23,16 @@ const FooterContent = styled.div`
   & > * > * {
     margin: 0 0.5em;
   }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    height: auto;
+    padding-right: 0;
+
+    & > * {
+      margin: 1em 0;
+    }
+  }
 `;
 
 const Logo = styled.img`
