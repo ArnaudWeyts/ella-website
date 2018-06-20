@@ -27,6 +27,9 @@
     "eslint-plugin-react": "^7.8.2"
   },
   "eslintConfig": {
-    "extends": "airbnb"
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    }
   }
 }
