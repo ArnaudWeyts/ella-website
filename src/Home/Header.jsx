@@ -105,7 +105,10 @@ class HeaderContainer extends Component {
           this.setState({ active: 'contact' });
         }
       }
-      if (window.scrollY > this.container.current.clientHeight / 2) {
+      if (
+        this.container.current !== null &&
+        window.scrollY > this.container.current.clientHeight / 2
+      ) {
         this.setState({ inverted: true });
       } else {
         this.setState({ inverted: false });
