@@ -13,14 +13,14 @@ import { AvenirTTF, AvenirRegularWOFF, AvenirRegularWOFF2, AvenirHeavyWOFF2 } fr
 injectGlobal`
   @font-face {
     font-family: 'Avenir';
-    src: local('Avenir'), url('${AvenirRegularWOFF2}') format('woff2'),
+    src: url('${AvenirRegularWOFF2}') format('woff2'),
       url('${AvenirRegularWOFF}') format('woff'),
-      url('${AvenirTTF}') format('truetype'),
+      url('${AvenirTTF}') format('truetype');
   }
 
   @font-face {
-    font-family: "Avenir";
-    src: local('Avenir'), url('${AvenirHeavyWOFF2}') format('woff2'),
+    font-family: 'Avenir';
+    src: url('${AvenirHeavyWOFF2}') format('woff2');
     font-weight: bold;
 }
 
