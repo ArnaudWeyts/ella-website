@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { I18n, Trans } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import styled, { css } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
@@ -9,6 +9,8 @@ import menuBlack from '../img/menu-black.svg';
 import menuWhite from '../img/menu-white.svg';
 
 import { Link } from './styles';
+
+import LanguagePicker from './LanguagePicker';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/href-no-hash */
@@ -221,14 +223,7 @@ class HeaderContainer extends Component {
             />
           </MenuButton>
           <ChangeLanguage>
-            <I18n>
-              {(t, { i18n }) => (
-                <React.Fragment>
-                  <button onClick={() => i18n.changeLanguage('en')}>en</button>
-                  <button onClick={() => i18n.changeLanguage('nl')}>nl</button>{' '}
-                </React.Fragment>
-              )}
-            </I18n>
+            <LanguagePicker />
           </ChangeLanguage>
         </HeaderSide>
       </Header>
