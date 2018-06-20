@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
+import { Trans } from 'react-i18next';
 
 import { Container, Intro, Title, SubTitle, Paragraph, Button } from './styles';
 
@@ -68,41 +69,65 @@ const WhoCanBenefitFromElla = ({ id }) => (
     <Content>
       <Segment backgroundColor="#e2f1f8" available>
         <Graphic src={graphics.personRetail} />
-        <SubTitle noUnderline>Retail</SubTitle>
+        <SubTitle noUnderline>
+          <Trans i18nKey="whoCanBenefit.retail.title">Retail</Trans>
+        </SubTitle>
         <SegmentParagraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
-          nesciunt in. Velit mollitia rem impedit, at.
+          <Trans i18nKey="whoCanBenefit.retail.text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
+            nesciunt in. Velit mollitia rem impedit, at.
+          </Trans>
         </SegmentParagraph>
         <Link to={`${process.env.PUBLIC_URL}/demo`}>
-          <DemoButton>Demo</DemoButton>
+          <DemoButton>
+            <Trans i18nKey="whoCanBenefit.retail.demo">Demo</Trans>
+          </DemoButton>
         </Link>
       </Segment>
       <Segment backgroundColor="#fcefe3">
         <Graphic src={graphics.personProduction} />
-        <SubTitle noUnderline>Production</SubTitle>
+        <SubTitle noUnderline>
+          <Trans i18nKey="whoCanBenefit.production.title">Production</Trans>
+        </SubTitle>
         <SegmentParagraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
-          nesciunt in. Velit mollitia rem impedit, at.
+          <Trans i18nKey="whoCanBenefit.production.text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
+            nesciunt in. Velit mollitia rem impedit, at.
+          </Trans>
         </SegmentParagraph>
-        <p>Coming soon</p>
+        <p>
+          <Trans i18nKey="whoCanBenefit.production.comingSoon">Coming soon</Trans>
+        </p>
       </Segment>
       <Segment backgroundColor="#f9e5e5">
         <Graphic src={graphics.personServices} />
-        <SubTitle noUnderline>Services</SubTitle>
+        <SubTitle noUnderline>
+          <Trans i18nKey="whoCanBenefit.services.title">Services</Trans>
+        </SubTitle>
         <SegmentParagraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
-          nesciunt in. Velit mollitia rem impedit, at.
+          <Trans i18nKey="whoCanBenefit.services.text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
+            nesciunt in. Velit mollitia rem impedit, at.
+          </Trans>
         </SegmentParagraph>
-        <p>Coming soon</p>
+        <p>
+          <Trans i18nKey="whoCanBenefit.services.comingSoon">Coming soon</Trans>
+        </p>
       </Segment>
       <Segment backgroundColor="#e7f2e8">
         <Graphic src={graphics.personTraining} />
-        <SubTitle noUnderline>Training</SubTitle>
+        <SubTitle noUnderline>
+          <Trans i18nKey="whoCanBenefit.training.title">Training</Trans>
+        </SubTitle>
         <SegmentParagraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
-          nesciunt in. Velit mollitia rem impedit, at.
+          <Trans i18nKey="whoCanBenefit.training.text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit
+            nesciunt in. Velit mollitia rem impedit, at.
+          </Trans>
         </SegmentParagraph>
-        <p>Coming soon</p>
+        <p>
+          <Trans i18nKey="whoCanBenefit.training.comingSoon">Coming soon</Trans>
+        </p>
       </Segment>
     </Content>
   </Container>

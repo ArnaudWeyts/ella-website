@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Trans } from 'react-i18next';
 import styled from 'styled-components';
 
 import { Title, Paragraph, Button, Triangle } from './styles';
@@ -75,15 +76,19 @@ const Intro = () => (
       <InnerContainer>
         <Item width={60}>
           <Title color="#fff" dropshadow noUnderline>
-            A new way to store and access knowledge
+            <Trans i18nKey="intro.title">A new way to store and access knowledge</Trans>
           </Title>
           <Paragraph color="#fff" dropshadow>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet
-            et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem
-            animi, quidem officiis deserunt vero ipsa.
+            <Trans i18nKey="intro.text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet
+              et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil
+              rem animi, quidem officiis deserunt vero ipsa.
+            </Trans>
           </Paragraph>
           <Link to={`${process.env.PUBLIC_URL}/demo`}>
-            <Button border>Try demo bot</Button>
+            <Button border>
+              <Trans i18nKey="intro.try">Try demo bot</Trans>
+            </Button>
           </Link>
         </Item>
         <Item width={30}>

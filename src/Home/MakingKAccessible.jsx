@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
 import styled from 'styled-components';
 
 import BeforeEllaGraphic from './Graphics/BeforeEllaGraphic';
@@ -23,11 +24,15 @@ function MakingKAccessible({ id }) {
     <React.Fragment>
       <Container small id={id}>
         <Intro>
-          <TitleForward>Making knowledge accessible</TitleForward>
+          <TitleForward>
+            <Trans i18nKey="makingKAccessible.title">Making knowledge accessible</Trans>
+          </TitleForward>
           <Paragraph>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ea maxime, quisquam
-            officia architecto accusamus! Dolores, iusto vero! Natus accusantium quam commodi maxime
-            incidunt perferendis perspiciatis consequuntur qui at odio?
+            <Trans i18nKey="makingKAccessible.text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ea maxime, quisquam
+              officia architecto accusamus! Dolores, iusto vero! Natus accusantium quam commodi
+              maxime incidunt perferendis perspiciatis consequuntur qui at odio?
+            </Trans>
           </Paragraph>
         </Intro>
         <ImageContainer>

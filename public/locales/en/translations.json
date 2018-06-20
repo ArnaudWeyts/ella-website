@@ -1,0 +1,85 @@
+{
+  "header": {
+    "navlinks": {
+      "home": "Home",
+      "about": "About",
+      "service": "Service",
+      "contact": "Contact"
+    }
+  },
+  "intro": {
+    "title": "A new way to access knowledge",
+    "text":
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+    "try": "Try demo bot"
+  },
+  "makingKAccessible": {
+    "title": "Making knowledge accessible",
+    "text":
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ea maxime, quisquam officia architecto accusamus! Dolores, iusto vero! Natus accusantium quam commodi maxime incidunt perferendis perspiciatis consequuntur qui at odio?"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "text":
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+    "searchTitle": "Search",
+    "searchText":
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+    "kfText":
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+    "answerTitle": "Answer",
+    "answerText":
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa."
+  },
+  "features": {
+    "customizable": "Customizable",
+    "anyDevice": "Any device",
+    "analytics": "Analytics",
+    "available247": "Available 24/7",
+    "voice": "Voice"
+  },
+  "whoCanBenefit": {
+    "title": "Who can benefit From Ella?",
+    "text":
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+    "retail": {
+      "title": "Retail",
+      "text":
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
+      "demo": "Demo"
+    },
+    "production": {
+      "title": "Production",
+      "text":
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
+      "comingSoon": "Coming soon"
+    },
+    "services": {
+      "title": "Services",
+      "text":
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
+      "comingSoon": "Coming soon"
+    },
+    "training": {
+      "title": "Training",
+      "text":
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
+      "comingSoon": "Coming soon"
+    }
+  },
+  "contact": {
+    "title": "Contact & support",
+    "text":
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut eius quia itaque porro, quod voluptatum pariatur.",
+    "name": "Name",
+    "company": "Company name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  },
+  "footer": {
+    "terms": "Terms of use",
+    "privacy": "Privacy",
+    "support": "Support"
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Trans } from 'react-i18next';
 
 import { Container, Title } from './styles';
 
@@ -35,23 +36,33 @@ const Features = () => (
     <InnerContainer>
       <li>
         <img src={graphics.code} alt="Code icon" />
-        <h3 style={{ color: '#fff' }}>Customizable</h3>
+        <h3 style={{ color: '#fff' }}>
+          <Trans i18nKey="features.customizable">Customizable</Trans>
+        </h3>
       </li>
       <li>
         <img src={graphics.screenMini} alt="Screen icon" />
-        <h3 style={{ color: '#fff' }}>Any device</h3>
+        <h3 style={{ color: '#fff' }}>
+          <Trans i18nKey="features.anyDevice">Any device</Trans>
+        </h3>
       </li>
       <li>
         <img src={graphics.analytics} alt="Analytics icon" />
-        <h3 style={{ color: '#fff' }}>Analytics</h3>
+        <h3 style={{ color: '#fff' }}>
+          <Trans i18nKey="features.analytics">Analytics</Trans>
+        </h3>
       </li>
       <li>
         <img src={graphics.twentyFourSeven} alt="24/7 icon" />
-        <h3 style={{ color: '#fff' }}>Available 24/7</h3>
+        <h3 style={{ color: '#fff' }}>
+          <Trans i18nKey="features.available247">Available 24/7</Trans>
+        </h3>
       </li>
       <li>
         <img src={graphics.mic} alt="Mic icon" />
-        <h3 style={{ color: '#fff' }}>Voice</h3>
+        <h3 style={{ color: '#fff' }}>
+          <Trans i18nKey="features.voice">Voice</Trans>
+        </h3>
       </li>
     </InnerContainer>
   </Container>

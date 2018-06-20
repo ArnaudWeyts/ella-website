@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 
 import Header from './Header';
 import Intro from './Intro';
@@ -26,19 +27,25 @@ const Anchor = styled.a`
 
 const Home = () => (
   <Container>
-    <Anchor id="home" />
-    <Header />
-    <Intro />
-    <Anchor id="about" />
-    <MakingKAccessible />
-    <HowItWorks />
-    <Features />
-    <Anchor id="service" />
-    <WhoCanBenefitFromElla />
-    <Anchor id="contact" />
-    <Contact />
-    <Footer />
-    <Webchat />
+    <I18n ns="translations">
+      {() => (
+        <React.Fragment>
+          <Anchor id="home" />
+          <Header />
+          <Intro />
+          <Anchor id="about" />
+          <MakingKAccessible />
+          <HowItWorks />
+          <Features />
+          <Anchor id="service" />
+          <WhoCanBenefitFromElla />
+          <Anchor id="contact" />
+          <Contact />
+          <Footer />
+          <Webchat />
+        </React.Fragment>
+      )}
+    </I18n>
   </Container>
 );
 

@@ -4,6 +4,8 @@ import { injectGlobal } from 'styled-components';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import './i18n';
+
 import { AvenirTTF, AvenirRegularWOFF, AvenirRegularWOFF2, AvenirHeavyWOFF2 } from './fonts';
 
 /* eslint-disable no-unused-expressions */

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Trans, I18n } from 'react-i18next';
 
 import graphics from '../img/contact';
 
@@ -65,19 +66,31 @@ function Contact({ id }) {
       <Triangle color="#0d8ec5" leftTop />
       <Triangle color="#71c0db" rightBottom />
       <Intro>
-        <Title>Contact & Support</Title>
+        <Title>
+          <Trans i18nKey="contact.title">Contact & Support</Trans>
+        </Title>
         <Paragraph>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut eius quia itaque porro, quod
-          voluptatum pariatur.
+          <Trans i18nKey="contact.text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut eius quia itaque porro,
+            quod voluptatum pariatur.
+          </Trans>
         </Paragraph>
       </Intro>
       <FormContainer>
         <Form>
-          <Input type="text" placeholder="Name" />
-          <Input type="text" placeholder="Company Name" />
-          <Input type="text" placeholder="Email" />
-          <Textarea name="text" cols="30" rows="10" placeholder="Message" />
-          <SubmitButton type="submit">Send</SubmitButton>
+          <I18n>
+            {t => (
+              <React.Fragment>
+                <Input type="text" placeholder={t('contact.name')} />
+                <Input type="text" placeholder={t('contact.company')} />
+                <Input type="text" placeholder={t('contact.email')} />
+                <Textarea name="text" cols="30" rows="10" placeholder={t('contact.message')} />
+              </React.Fragment>
+            )}
+          </I18n>
+          <SubmitButton type="submit">
+            <Trans i18nKey="contact.send">Send</Trans>
+          </SubmitButton>
         </Form>
         <List>
           <li>

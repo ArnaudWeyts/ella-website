@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
 import styled from 'styled-components';
 
 import graphics from '../img/howItWorks';
@@ -66,11 +67,15 @@ const HowItWorks = () => (
     <Triangle color="#71c0db" leftBottom />
     <InnerContainer>
       <Intro>
-        <Title>How it works</Title>
+        <Title>
+          <Trans i18nKey="howItWorks.title">How it works</Trans>
+        </Title>
         <Paragraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officia magni vitae
-          maiores inventore explicabo dolore dolorum, optio impedit eum totam corporis tempore
-          provident, neque adipisci quisquam animi esse repellat!
+          <Trans i18nKey="howItWorks.text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officia magni vitae
+            maiores inventore explicabo dolore dolorum, optio impedit eum totam corporis tempore
+            provident, neque adipisci quisquam animi esse repellat!
+          </Trans>
         </Paragraph>
       </Intro>
       <VideoContainer>
@@ -81,29 +86,39 @@ const HowItWorks = () => (
       <ImageContainer>
         <Segment>
           <img src={graphics.search} alt="search" />
-          <SubTitle>Search</SubTitle>
+          <SubTitle>
+            <Trans i18nKey="howItWorks.searchTitle">Search</Trans>
+          </SubTitle>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
-            maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum iure
-            inventore numquam, eos quas odio officia!
+            <Trans i18nKey="howItWorks.searchText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
+              maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum
+              iure inventore numquam, eos quas odio officia!
+            </Trans>
           </p>
         </Segment>
         <Segment>
           <img src={graphics.kf} alt="kf" />
           <SubTitle>KnowledgeFlow</SubTitle>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
-            maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum iure
-            inventore numquam, eos quas odio officia!
+            <Trans i18nKey="howItWorks.kfText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
+              maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum
+              iure inventore numquam, eos quas odio officia!
+            </Trans>
           </p>
         </Segment>
         <Segment>
           <img src={graphics.answer} alt="answer" />
-          <SubTitle>Answer</SubTitle>
+          <SubTitle>
+            <Trans i18nKey="howItWorks.answerTitle">Answer</Trans>
+          </SubTitle>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
-            maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum iure
-            inventore numquam, eos quas odio officia!
+            <Trans i18nKey="howItWorks.answerText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi nemo assumenda
+              maiores totam a voluptatum labore recusandae dolore, cumque alias corporis, nostrum
+              iure inventore numquam, eos quas odio officia!
+            </Trans>
           </p>
         </Segment>
       </ImageContainer>

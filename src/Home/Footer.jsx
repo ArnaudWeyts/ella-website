@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Trans } from 'react-i18next';
 
 import logos from '../img/logos';
 
@@ -46,9 +47,15 @@ const FooterComponent = () => (
     <FooterContent>
       <Logo src={logos.ellaColor} alt="Ella logo" />
       <div>
-        <Link href="#">Terms of use</Link>
-        <Link href="#">Privacy</Link>
-        <Link href="#">Support</Link>
+        <Link href="#">
+          <Trans i18nKey="footer.terms">Terms of use</Trans>
+        </Link>
+        <Link href="#">
+          <Trans i18nKey="footer.privacy">Privacy</Trans>
+        </Link>
+        <Link href="#">
+          <Trans i18nKey="footer.support">Support</Trans>
+        </Link>
       </div>
       <div>
         <Link href="#">

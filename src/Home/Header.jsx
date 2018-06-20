@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { I18n, Trans } from 'react-i18next';
 import styled, { css } from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
@@ -112,6 +113,10 @@ const MenuButton = Link.extend`
   }
 `;
 
+const ChangeLanguage = styled.div`
+  float: right;
+`;
+
 class HeaderContainer extends Component {
   constructor(props) {
     super(props);
@@ -182,28 +187,28 @@ class HeaderContainer extends Component {
             <img style={{ height: '3em' }} src={close} alt="closeIcon" />
           </Link>
           <NavLink selected={active === 'home'} onClick={() => this.setActive('home')} href="#home">
-            Home
+            <Trans i18nKey="header.navlinks.home">Home</Trans>
           </NavLink>
           <NavLink
             selected={active === 'about'}
             onClick={() => this.setActive('about')}
             href="#about"
           >
-            About
+            <Trans i18nKey="header.navlinks.about">About</Trans>
           </NavLink>
           <NavLink
             onClick={() => this.setActive('service')}
             selected={active === 'service'}
             href="#service"
           >
-            Service
+            <Trans i18nKey="header.navlinks.service">Service</Trans>
           </NavLink>
           <NavLink
             selected={active === 'contact'}
             onClick={() => this.setActive('contact')}
             href="#contact"
           >
-            Contact
+            <Trans i18nKey="header.navlinks.contact">Contact</Trans>
           </NavLink>
           <div style={{ flexGrow: '1', height: '3em' }} />
         </HeaderMenu>
@@ -215,6 +220,16 @@ class HeaderContainer extends Component {
               alt="menu icon"
             />
           </MenuButton>
+          <ChangeLanguage>
+            <I18n>
+              {(t, { i18n }) => (
+                <React.Fragment>
+                  <button onClick={() => i18n.changeLanguage('en')}>en</button>
+                  <button onClick={() => i18n.changeLanguage('nl')}>nl</button>{' '}
+                </React.Fragment>
+              )}
+            </I18n>
+          </ChangeLanguage>
         </HeaderSide>
       </Header>
     );
