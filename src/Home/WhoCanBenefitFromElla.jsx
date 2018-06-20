@@ -60,10 +60,14 @@ const DemoButton = Button.extend`
 const WhoCanBenefitFromElla = ({ id }) => (
   <Container style={{ margin: '0 2em' }} id={id}>
     <Intro>
-      <Title>Who can benefit From Ella?</Title>
+      <Title>
+        <Trans i18nKey="whoCanBenefit.title">Who can benefit From Ella?</Trans>
+      </Title>
       <Paragraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorem totam maiores
-        tenetur, vel asperiores possimus exercitationem reiciendis.
+        <Trans i18nKey="whoCanBenefit.text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorem totam maiores
+          tenetur, vel asperiores possimus exercitationem reiciendis.
+        </Trans>
       </Paragraph>
     </Intro>
     <Content>

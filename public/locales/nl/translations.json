@@ -2,84 +2,85 @@
   "header": {
     "navlinks": {
       "home": "Home",
-      "about": "About",
+      "about": "Over",
       "service": "Service",
       "contact": "Contact"
     }
   },
   "intro": {
-    "title": "A new way to store and access knowledge",
+    "title": "Een nieuwe manier om kennis op te slaan en te verkrijgen",
     "text":
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
-    "try": "Try demo bot"
+    "try": "Probeer demo bot"
   },
   "makingKAccessible": {
-    "title": "Making knowledge accessible",
+    "title": "Kennis toegankelijk maken",
     "text":
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ea maxime, quisquam officia architecto accusamus! Dolores, iusto vero! Natus accusantium quam commodi maxime incidunt perferendis perspiciatis consequuntur qui at odio?"
   },
   "howItWorks": {
-    "title": "How it works",
+    "title": "Hoe het werkt",
     "text":
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
-    "searchTitle": "Search",
+    "searchTitle": "Zoek",
     "searchText":
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
     "kfText":
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
-    "answerTitle": "Answer",
+    "answerTitle": "Antwoord",
     "answerText":
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa."
   },
   "features": {
-    "customizable": "Customizable",
-    "anyDevice": "Any device",
+    "title": "Functionaliteiten",
+    "customizable": "Aanpasbaar",
+    "anyDevice": "Elk toestel",
     "analytics": "Analytics",
-    "available247": "Available 24/7",
-    "voice": "Voice"
+    "available247": "Beschikbaar 24/7",
+    "voice": "Stem"
   },
   "whoCanBenefit": {
-    "title": "Who can benefit From Ella?",
+    "title": "Voor wie is Ella bedoeld?",
     "text":
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
     "retail": {
-      "title": "Retail",
+      "title": "Handel",
       "text":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
       "demo": "Demo"
     },
     "production": {
-      "title": "Production",
+      "title": "Productie",
       "text":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
-      "comingSoon": "Coming soon"
+      "comingSoon": "Binnenkort verkrijgbaar"
     },
     "services": {
-      "title": "Services",
+      "title": "Diensten",
       "text":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
-      "comingSoon": "Coming soon"
+      "comingSoon": "Binnenkort verkrijgbaar"
     },
     "training": {
-      "title": "Training",
+      "title": "Opleiding",
       "text":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
-      "comingSoon": "Coming soon"
+      "comingSoon": "Binnenkort verkrijgbaar"
     }
   },
   "contact": {
-    "title": "Contact & support",
+    "title": "Contact & ondersteuning",
     "text":
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut eius quia itaque porro, quod voluptatum pariatur.",
-    "name": "Name",
-    "company": "Company name",
+    "name": "Naam",
+    "company": "Naam bedrijf",
     "email": "Email",
-    "message": "Message",
-    "send": "Send"
+    "message": "Bericht",
+    "send": "Verstuur"
   },
   "footer": {
-    "terms": "Terms of use",
+    "terms": "Gebruiksvoorwaarden",
     "privacy": "Privacy",
-    "support": "Support"
+    "support": "Ondersteuning"
   }
 }

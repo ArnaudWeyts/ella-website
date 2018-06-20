@@ -31,7 +31,7 @@ const InnerContainer = styled.ul`
 const Features = () => (
   <Container style={{ background: `url(${graphics.barsExtended}), #0d8ec5` }}>
     <Title style={{ color: '#fff' }} noUnderline>
-      Features
+      <Trans i18nKey="features.title">Features</Trans>
     </Title>
     <InnerContainer>
       <li>
