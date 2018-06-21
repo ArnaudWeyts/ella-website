@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { I18n } from 'react-i18next';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { Button } from './styles';
 
@@ -12,8 +12,10 @@ const Popup = styled.div`
   background: #0a6b94;
   border-radius: 5px;
   margin-top: 15px;
+  height: 13em;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   pointer-events: ${props => (props.show ? 'auto' : 'none')};
   margin-left: -0.75em;
   box-sizing: border-box;
@@ -31,11 +33,46 @@ const Popup = styled.div`
     border-bottom-color: #0a6b94;
     border-width: 0.5em;
     margin-left: -0.5em;
+    transition: all 0.5s ease-in-out;
   }
 
   & ${Button} {
     margin: 0.5em 0.5em;
   }
+
+  ${props =>
+    props.inverted &&
+    css`
+      background: #eb8018;
+
+      &:after {
+        border-bottom-color: #eb8018;
+      }
+    `};
+
+  ${props =>
+    props.showMenu &&
+    css`
+      margin-top: -16.5em;
+
+      &:after {
+        top: 100%;
+      }
+
+      &:after {
+        border-bottom: 0;
+        border-top-color: #eb8018;
+      }
+    `};
+`;
+
+const LanguageButton = Button.extend`
+  ${props =>
+    props.inverted &&
+    css`
+      color: #000;
+      border-color: #eb8018;
+    `};
 `;
 
 const languages = ['en', 'nl', 'fr', 'de'];
@@ -67,14 +104,21 @@ class LanguagePicker extends Component {
 
   render() {
     const { showPopup, selectedLanguage } = this.state;
+    const { inverted, showMenu } = this.props;
     return (
       <I18n>
         {(t, { i18n }) => (
           <React.Fragment>
-            <Button border onClick={() => this.setState({ showPopup: !showPopup })}>
+            <LanguageButton
+              inverted={inverted}
+              border
+              onClick={() => this.setState({ showPopup: !showPopup })}
+            >
               {selectedLanguage}
-            </Button>
-            <Popup show={showPopup}>{this.renderLanguages(i18n)}</Popup>
+            </LanguageButton>
+            <Popup inverted={inverted} show={showPopup} showMenu={showMenu}>
+              {this.renderLanguages(i18n)}
+            </Popup>
           </React.Fragment>
         )}
       </I18n>

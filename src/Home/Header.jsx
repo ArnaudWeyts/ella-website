@@ -116,7 +116,18 @@ const MenuButton = Link.extend`
 `;
 
 const ChangeLanguage = styled.div`
-  float: right;
+  ${props =>
+    !props.showMenu &&
+    css`
+      position: absolute;
+      right: 2em;
+    `};
+
+  ${props =>
+    props.showMenu &&
+    css`
+      flex-grow: 1;
+    `};
 `;
 
 class HeaderContainer extends Component {
@@ -213,6 +224,9 @@ class HeaderContainer extends Component {
             <Trans i18nKey="header.navlinks.contact">Contact</Trans>
           </NavLink>
           <div style={{ flexGrow: '1', height: '3em' }} />
+          <ChangeLanguage showMenu={showMenu}>
+            <LanguagePicker inverted={showMenu ? true : inverted} showMenu={showMenu} />
+          </ChangeLanguage>
         </HeaderMenu>
         <HeaderSide>
           <MenuButton onClick={this.toggleMenu}>
@@ -222,9 +236,6 @@ class HeaderContainer extends Component {
               alt="menu icon"
             />
           </MenuButton>
-          <ChangeLanguage>
-            <LanguagePicker />
-          </ChangeLanguage>
         </HeaderSide>
       </Header>
     );
