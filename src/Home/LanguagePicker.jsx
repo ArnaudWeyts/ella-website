@@ -86,7 +86,29 @@ class LanguagePicker extends Component {
       selectedLanguage: 'en',
     };
 
+    this.popup = React.createRef();
+
     this.selectLanguage = this.selectLanguage.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.setPopup = this.setPopup.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  setPopup(ref) {
+    this.popup = ref;
+  }
+
+  handleClickOutside(event) {
+    if (this.popup && !this.popup.contains(event.target)) {
+      this.setState({ showPopup: false });
+    }
   }
 
   selectLanguage(i18n, language) {
@@ -108,7 +130,7 @@ class LanguagePicker extends Component {
     return (
       <I18n>
         {(t, { i18n }) => (
-          <React.Fragment>
+          <div ref={this.setPopup}>
             <LanguageButton
               inverted={inverted}
               border
@@ -119,7 +141,7 @@ class LanguagePicker extends Component {
             <Popup inverted={inverted} show={showPopup} showMenu={showMenu}>
               {this.renderLanguages(i18n)}
             </Popup>
-          </React.Fragment>
+          </div>
         )}
       </I18n>
     );
