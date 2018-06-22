@@ -75,7 +75,7 @@ const LanguageButton = Button.extend`
     `};
 `;
 
-const languages = ['en', 'nl', 'fr', 'de'];
+const languages = ['en', 'nl'];
 
 class LanguagePicker extends Component {
   constructor(props) {
@@ -83,7 +83,6 @@ class LanguagePicker extends Component {
 
     this.state = {
       showPopup: false,
-      selectedLanguage: 'en',
     };
 
     this.popup = React.createRef();
@@ -113,7 +112,7 @@ class LanguagePicker extends Component {
 
   selectLanguage(i18n, language) {
     i18n.changeLanguage(language);
-    this.setState({ selectedLanguage: language, showPopup: false });
+    this.setState({ showPopup: false });
   }
 
   renderLanguages(i18n) {
@@ -125,7 +124,7 @@ class LanguagePicker extends Component {
   }
 
   render() {
-    const { showPopup, selectedLanguage } = this.state;
+    const { showPopup } = this.state;
     const { inverted, showMenu } = this.props;
     return (
       <I18n>
@@ -136,7 +135,7 @@ class LanguagePicker extends Component {
               border
               onClick={() => this.setState({ showPopup: !showPopup })}
             >
-              {selectedLanguage}
+              {i18n.language}
             </LanguageButton>
             <Popup inverted={inverted} show={showPopup} showMenu={showMenu}>
               {this.renderLanguages(i18n)}
