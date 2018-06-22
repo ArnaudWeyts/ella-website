@@ -8,6 +8,11 @@ import { Container, Intro, Title, Paragraph, Input, Button, Triangle } from './s
 
 const FormContainer = styled.div`
   display: flex;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Form = styled.form`
@@ -22,6 +27,11 @@ const Form = styled.form`
 
   & > * {
     margin: 0.75em 0;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 2em;
   }
 `;
 
@@ -52,6 +62,17 @@ const List = styled.ul`
       margin: 2em 0;
     }
   }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & li {
+      margin: 1em 1em !important;
+    }
+  }
 `;
 
 const ListGraphic = styled.img`
@@ -62,7 +83,7 @@ const ListGraphic = styled.img`
 
 function Contact({ id }) {
   return (
-    <Container style={{ padding: '0 2em' }} small id={id}>
+    <Container small id={id}>
       <Triangle color="#0d8ec5" leftTop />
       <Triangle color="#71c0db" rightBottom />
       <Intro>

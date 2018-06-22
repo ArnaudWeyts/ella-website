@@ -17,6 +17,20 @@ const ImageContainer = styled.div`
   justify-content: space-evenly;
   height: 20em;
   margin-top: 1.25em;
+
+  @media (max-width: 550px) {
+    height: 15em;
+  }
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+
+    & svg:nth-of-type(1) {
+      margin-bottom: 2em;
+    }
+  }
 `;
 
 function MakingKAccessible({ id }) {

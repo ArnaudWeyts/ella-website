@@ -8,8 +8,6 @@ import { Container, Intro, Title, SubTitle, Paragraph, Triangle } from './styles
 
 const InnerContainer = styled.div`
   max-width: 70em;
-  margin: 0 2em;
-  border-radius: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +19,12 @@ const VideoContainer = styled.div`
   width: 100%;
   justify-content: center;
   margin: 2em 0;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
 `;
 
 const ChatGraphics = styled.div`
@@ -29,6 +33,13 @@ const ChatGraphics = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  @media (max-width: 800px) {
+    width: 20em;
+    height: 25em;
+    margin: -5em 0;
+    transform: rotate(90deg);
+  }
 `;
 
 const VideoBackground = styled.div`
@@ -37,6 +48,11 @@ const VideoBackground = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    height: 20em;
+  }
 `;
 
 const ImageContainer = styled.div`

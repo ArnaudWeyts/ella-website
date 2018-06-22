@@ -9,7 +9,6 @@ import phone from '../img/phone.svg';
 import bars from '../img/bars.svg';
 
 const Container = styled.div`
-  height: 33em;
   padding-top: 7em;
   background: -moz-radial-gradient(
     50% 50%,
@@ -32,7 +31,7 @@ const Container = styled.div`
     rgba(110, 187, 220, 1) 0%,
     rgba(13, 142, 197, 1) 100%
   );
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 100% 30% auto auto;
   background-position: left center center center;
   background: -ms-radial-gradient(
@@ -50,17 +49,6 @@ const Container = styled.div`
   filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
 `;
 
-const InnerContainer = styled.div`
-  max-width: 60em;
-  margin: 0 auto;
-  padding: 0 2em;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-`;
-
 const Item = styled.div`
   height: 100%;
   width: ${props => `${props.width}%`};
@@ -68,6 +56,26 @@ const Item = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const InnerContainer = styled.div`
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 2em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    & ${Item}:nth-of-type(1) {
+      margin-bottom: 2em;
+    }
+  }
 `;
 
 const Intro = () => (

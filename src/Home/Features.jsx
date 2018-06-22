@@ -26,6 +26,15 @@ const InnerContainer = styled.ul`
       width: 80%;
     }
   }
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+
+    & li {
+      width: 50%;
+      margin: 0;
+    }
+  }
 `;
 
 const Features = () => (
