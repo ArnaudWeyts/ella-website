@@ -12,7 +12,6 @@ const Popup = styled.div`
   background: #0a6b94;
   border-radius: 5px;
   margin-top: 15px;
-  height: 13em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

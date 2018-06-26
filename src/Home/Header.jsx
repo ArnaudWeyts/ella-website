@@ -116,11 +116,14 @@ const MenuButton = Link.extend`
 `;
 
 const ChangeLanguage = styled.div`
+  position: absolute;
+  right: 2em;
+
   ${props =>
-    !props.showMenu &&
+    props.showMenu &&
     css`
-      position: absolute;
-      right: 2em;
+      position: static;
+      right: auto;
     `};
 
   ${props =>
@@ -182,7 +185,9 @@ class HeaderContainer extends Component {
   }
 
   toggleMenu() {
-    this.setState({ showMenu: !this.state.showMenu });
+    if (window.innerWidth < 800) {
+      this.setState({ showMenu: !this.state.showMenu });
+    }
   }
 
   render() {
