@@ -10,26 +10,25 @@
   "intro": {
     "title": "A new way to store and access knowledge",
     "text":
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+      "Ella is a computer program designed to simulate conversation with human users. You ask her something about an item and she will respond.",
     "try": "Try demo bot"
   },
   "makingKAccessible": {
     "title": "Making knowledge accessible",
     "text":
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ea maxime, quisquam officia architecto accusamus! Dolores, iusto vero! Natus accusantium quam commodi maxime incidunt perferendis perspiciatis consequuntur qui at odio?"
+      "Ella works like a real person. She has a friendly and positive character and is accessible to everyone. Ella is created to help people with a purchase when an employee is unavailable. You ask her a question and she will answer it in a very human way."
   },
   "howItWorks": {
     "title": "How it works",
     "text":
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+      "Ella gets her knowledge from a big database from KnowledgeFlow. She screens it and give you the right answer. In the next vido will be a small demonstration how Ella works.",
     "searchTitle": "Search",
     "searchText":
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
-    "kfText":
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+      "If the customer asks Ella a question she immediately searches for the right information in the KnowledgeFlow database.",
+    "kfText": "KnowledgeFlow has a gigantic database where Ella will get her information.",
     "answerTitle": "Answer",
     "answerText":
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa."
+      "If she found all of her information she will show it to the customer. After this information, every customer can ask for some more information or just thank her for her services."
   },
   "features": {
     "title": "Features",
@@ -42,36 +41,36 @@
   "whoCanBenefit": {
     "title": "Who can benefit From Ella?",
     "text":
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor atque eveniet et, iure odio ratione distinctio quidem tempora. Ipsum perspiciatis veritatis nihil rem animi, quidem officiis deserunt vero ipsa.",
+      "Ella is suitable for young and old. Everyone can turn to Ella when looking for a product.",
     "retail": {
       "title": "Retail",
       "text":
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
+        "Ella can be used in retail. She respond on questions from the costumers with detailed information.",
       "demo": "Demo"
     },
     "production": {
       "title": "Production",
       "text":
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
+        "Ella can help production employees to operate specialised machines without making mistakes.",
       "comingSoon": "Coming soon"
     },
     "services": {
       "title": "Services",
       "text":
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
+        "Ella can be used in order to simplify the research information process without a lot of sentences.",
       "comingSoon": "Coming soon"
     },
     "training": {
       "title": "Training",
       "text":
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus odit nesciunt in. Velit mollitia rem impedit, at.",
+        "Ella can be used in education, as she can help the students to learn the study material.",
       "comingSoon": "Coming soon"
     }
   },
   "contact": {
     "title": "Contact & support",
     "text":
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut eius quia itaque porro, quod voluptatum pariatur.",
+      "If you require some more information or support involving Ella do not hesitate to contact us.",
     "name": "Name",
     "company": "Company name",
     "email": "Email",

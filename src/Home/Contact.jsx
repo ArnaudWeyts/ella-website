@@ -4,7 +4,7 @@ import { Trans, I18n } from 'react-i18next';
 
 import graphics from '../img/contact';
 
-import { Container, Intro, Title, Paragraph, Input, Button, Triangle } from './styles';
+import { Container, Intro, Title, Paragraph, Input, Button, Triangle, Link } from './styles';
 
 const FormContainer = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ const FormContainer = styled.div`
 
 const Form = styled.form`
   margin: 0 1%;
-  width: 63%;
+  width: 60%;
   display: inline-block;
 
   & input,
@@ -51,7 +51,7 @@ const List = styled.ul`
   margin: 0 3%;
   list-style: none;
   padding: 0;
-  width: 33%;
+  width: 40%;
   display: inline-block;
 
   & li {
@@ -115,13 +115,16 @@ function Contact({ id }) {
         </Form>
         <List>
           <li>
-            <ListGraphic src={graphics.location} alt="" />Lorem ipsum
+            <ListGraphic src={graphics.location} alt="" />Kapelstraat 88, B-2840 Rumst, Belgium
           </li>
           <li>
-            <ListGraphic src={graphics.email} alt="" />Lorem ipsum
+            <ListGraphic src={graphics.email} alt="" />
+            <Link style={{ color: '#000' }} href="mailto:info@knowledgeflow.eu">
+              info@knowledgeflow.eu
+            </Link>
           </li>
           <li>
-            <ListGraphic src={graphics.phone} alt="" />Lorem ipsum
+            <ListGraphic src={graphics.phone} alt="" />+32 (0)495 52 53 55
           </li>
         </List>
       </FormContainer>

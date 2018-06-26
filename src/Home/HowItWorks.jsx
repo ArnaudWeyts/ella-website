@@ -63,6 +63,7 @@ const ImageContainer = styled.div`
 
   @media (max-width: 800px) {
     flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -70,10 +71,15 @@ const Segment = styled.div`
   margin: 1em 3em;
   text-align: center;
   min-width: 5em;
+  width: 30%;
 
   & img {
     max-width: 20em;
     margin: 3em 0;
+  }
+
+  @media (max-width: 800px) {
+    width: auto;
   }
 `;
 
