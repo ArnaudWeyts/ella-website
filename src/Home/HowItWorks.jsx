@@ -46,13 +46,29 @@ const VideoBackground = styled.div`
   width: 66%;
   background: url(${graphics.ipad});
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
+  background-size: contain;
+
+  &:after {
+    padding-top: 70%;
+    display: block;
+    content: '';
+  }
 
   @media (max-width: 800px) {
     width: 100%;
     height: 20em;
   }
+`;
+
+const Video = styled.video`
+  background: red;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  padding: 4.7% 8.6% 4.6% 8.3%;
+  box-sizing: border-box;
+  background-clip: content-box;
 `;
 
 const ImageContainer = styled.div`
@@ -102,7 +118,9 @@ const HowItWorks = () => (
       </Intro>
       <VideoContainer>
         <ChatGraphics background={graphics.chatsLeft} />
-        <VideoBackground />
+        <VideoBackground>
+          <Video />
+        </VideoBackground>
         <ChatGraphics background={graphics.chatsRight} />
       </VideoContainer>
       <ImageContainer>

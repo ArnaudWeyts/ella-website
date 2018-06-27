@@ -58,6 +58,27 @@ const Item = styled.div`
   align-items: center;
 `;
 
+const BackgroundPhone = Item.extend`
+  background: url(${phone});
+  height: 30em;
+  width: 15em;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Video = styled.div`
+  height: 61.1%;
+  width: 69.5%;
+  margin-right: 4%;
+  margin-bottom: 3.7%;
+
+  background: red;
+  opacity: 0.5;
+`;
+
 const InnerContainer = styled.div`
   max-width: 60em;
   margin: 0 auto;
@@ -99,9 +120,9 @@ const Intro = () => (
             </Button>
           </Link>
         </Item>
-        <Item width={30}>
-          <img src={phone} alt="Phone" />
-        </Item>
+        <BackgroundPhone width={30}>
+          <Video>Video</Video>
+        </BackgroundPhone>
       </InnerContainer>
     </Container>
     <Triangle left color="#71c0db" />
