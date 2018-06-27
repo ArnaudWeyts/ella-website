@@ -41,13 +41,14 @@ const Header = styled.header`
   width: 100%;
   z-index: 3;
   box-sizing: border-box;
-  transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out, height 0.5s ease-in-out;
 
   ${props =>
     props.inverted &&
     css`
       background: #fff;
       box-shadow: rgba(0, 0, 0, 0.0588235) 0px 2px 1px 0px;
+      height: 5em;
 
       & ${HeaderLogoText} {
         color: #000;
