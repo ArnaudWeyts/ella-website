@@ -69,14 +69,11 @@ const BackgroundPhone = Item.extend`
   align-items: center;
 `;
 
-const Video = styled.div`
+const Video = styled.video`
   height: 61.1%;
   width: 69.5%;
   margin-right: 4%;
   margin-bottom: 3.7%;
-
-  background: red;
-  opacity: 0.5;
 `;
 
 const InnerContainer = styled.div`
@@ -121,7 +118,7 @@ const Intro = () => (
           </Link>
         </Item>
         <BackgroundPhone width={30}>
-          <Video>Video</Video>
+          <Video />
         </BackgroundPhone>
       </InnerContainer>
     </Container>

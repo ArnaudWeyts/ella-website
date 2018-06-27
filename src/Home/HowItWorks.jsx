@@ -62,8 +62,6 @@ const VideoBackground = styled.div`
 `;
 
 const Video = styled.video`
-  background: red;
-  opacity: 0.5;
   width: 100%;
   height: 100%;
   padding: 4.7% 8.6% 4.6% 8.3%;
