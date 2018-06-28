@@ -134,9 +134,9 @@ class LanguagePicker extends Component {
               border
               onClick={() => this.setState({ showPopup: !showPopup })}
             >
-              {i18n.language.indexOf('-') > -1
-                ? i18n.language.substring(0, i18n.language.indexOf('-'))
-                : i18n.language}
+              {i18n.languages[0].indexOf('-') > -1
+                ? i18n.languages[0].substring(0, i18n.languages[0].indexOf('-'))
+                : i18n.languages[0]}
             </LanguageButton>
             <Popup inverted={inverted} show={showPopup} showMenu={showMenu}>
               {this.renderLanguages(i18n)}

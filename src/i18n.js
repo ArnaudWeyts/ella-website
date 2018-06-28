@@ -14,6 +14,8 @@ i18n
     ns: ['translations'],
     defaultNS: 'translations',
 
+    whitelist: ['en', 'nl'],
+
     debug: process.env.NODE_ENV !== 'production',
 
     interpolation: {
