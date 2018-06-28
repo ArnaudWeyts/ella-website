@@ -7,6 +7,7 @@ import { Title, Paragraph, Button, Triangle } from './styles';
 
 import phone from '../img/phone.svg';
 import bars from '../img/bars.svg';
+import video from '../vid/luis.mov';
 
 const Container = styled.div`
   padding-top: 7em;
@@ -118,7 +119,7 @@ const Intro = () => (
           </Link>
         </Item>
         <BackgroundPhone width={30}>
-          <Video />
+          <Video src={video} autoPlay />
         </BackgroundPhone>
       </InnerContainer>
     </Container>

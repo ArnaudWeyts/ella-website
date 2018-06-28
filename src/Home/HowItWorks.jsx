@@ -67,6 +67,10 @@ const Video = styled.video`
   padding: 4.7% 8.6% 4.6% 8.3%;
   box-sizing: border-box;
   background-clip: content-box;
+
+  background: red;
+  opacity: 0.5;
+  background-clip: content-box;
 `;
 
 const ImageContainer = styled.div`
